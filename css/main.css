@@ -1,0 +1,83 @@
+/* 	CSS File for Team 13
+	Systems and Networks */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yantramanav:300');
+	
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fff;
+	color: #222;
+	font-family: 'Open Sans', verdana, arial, sans-serif;
+	font-size: 13px;
+}
+
+/* Main Elements */
+
+#top {
+	height: 90px;
+	width: 100%;
+	background: #1C7698;
+}
+
+/* 1c9825 */
+
+#sidebar {
+	width: 220px;
+	float: right;
+	min-height: 300px;
+}
+main {
+	width: 740px;
+	float: left;
+}
+
+#navi {
+	height: 30px;
+	width: 100%;
+	background: #d5e6ec;
+}
+
+.wrapper {
+	width: 980px;
+	margin: 0 auto;
+}
+
+/* Text */
+
+h1, h2, h3 {
+	font-family: 'Yantramanav', sans-serif;
+	font-weight: 300;
+	color: #142e38;
+}
+
+h1, h2 {
+	border-bottom: 1px solid #d5e6ec;
+}
+
+h1 {
+	font-size: 3.2em;
+	margin: 14px 0;
+	padding: 16px 0;
+}
+
+h2 {
+	font-size: 2.8em;
+	margin: 10px 0;
+	padding: 14px 0;
+}
+
+h3 {
+	font-size: 2em;
+	margin: 6px 0;
+	padding: 6px 0;
+}
+
+h4 {
+	font-size: 1.4em;
+	margin: 4px 0;
+	padding: 4px 0;
+}
