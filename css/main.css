@@ -1,7 +1,5 @@
 /* 	CSS File for Team 13
 	Systems and Networks */
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yantramanav:300');
 	
 html, body {
 	margin: 0;
@@ -9,75 +7,222 @@ html, body {
 }
 
 body {
-	background: #fff;
-	color: #222;
-	font-family: 'Open Sans', verdana, arial, sans-serif;
+	font-family: 'Segoe UI', Arial, Times New Roman, sans-serif;
 	font-size: 13px;
-}
-
-/* Main Elements */
-
-#top {
-	height: 90px;
-	width: 100%;
-	background: #1C7698;
-}
-
-/* 1c9825 */
-
-#sidebar {
-	width: 220px;
-	float: right;
-	min-height: 300px;
-}
-main {
-	width: 740px;
-	float: left;
-}
-
-#navi {
-	height: 30px;
-	width: 100%;
-	background: #d5e6ec;
+	background: #fafafa;
+	color: #0C2D40;
 }
 
 .wrapper {
 	width: 980px;
 	margin: 0 auto;
+	padding: 0;
 }
 
-/* Text */
+/* header styling */
 
-h1, h2, h3 {
-	font-family: 'Yantramanav', sans-serif;
-	font-weight: 300;
-	color: #142e38;
+#top {
+	width: 100%;
+	height: 60px;
+	margin-top: 10px;
 }
 
-h1, h2 {
-	border-bottom: 1px solid #d5e6ec;
+#bottom {
+	width: 100%;
+	border-top: 1px dashed #0C2D40;
+	margin: 20px 0;
+	padding: 10px 0;
+	text-align: center;
+	border-bottom: 4px solid #0C2D40;
+}
+
+#logo {
+	float: left;
+	height: 60px;
+}
+
+#navi {
+	float: right;
+	height: 60px;
+}
+
+#navi ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 60px;
+}
+
+#navi ul li {
+	display: inline;
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+#navi a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #29A2E5;
+}
+
+/* content styling */
+
+.mainModule {
+	width: 100%;
+}
+
+.rowFixer {
+	position: relative;
+}
+
+.smallCol, .thirdCol {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.fullCol {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.smallCol {
+	width: 33%;
+	margin: 0;
+	display: inline-block;
+}
+
+.thirdCol {
+	width: 66%;
+	margin: 0;
+	display: inline-block;
+}
+
+/* News */
+
+.newsBrief {
+	height: 220px;
+	background: #2387BF;
+	position: relative;
+	color: #fafafa;
+}
+
+.newsDescrip {
+	position: absolute;
+	bottom: 0;
+	background: url("../images/carousel/transbg.png");
+	width: 90%;
+}
+
+.newsDescrip h3 {
+	margin: 8px;
+	padding: 0;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.newsDescrip a {
+	text-decoration: none;
+	color: #fafafa;
+}
+
+.newsDescrip p {
+	margin: 8px;
+	padding: 0;
+}
+
+/* Carousel */ 
+
+#carousel {
+	width: 100%;
+	background: #2387BF;
+	height: 280px;
+	margin: 20px 0;
+	position: relative;
+	color: #fafafa;
+}
+
+.carSlide {
+	width: 100%;
+	height: 100%;
+}
+
+.carDescrip {
+	position: absolute;
+	bottom: 0;
+	background: url("../images/carousel/transbg.png");
+	width: 100%;
+}
+
+.carSlide a {
+	margin: 20px;
+	padding: 0;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+}
+
+#carousel .back, #carousel .next {
+	position: absolute;
+	top: 50%;
+	background: url("../images/carousel/transbg.png");
+	width: auto;
+	padding: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#carousel .back {
+	left: 0;
+}
+
+#carousel .next {
+	right: 0;
+}
+
+/* Text Styling */
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+	color: #29A2E5;
 }
 
 h1 {
-	font-size: 3.2em;
-	margin: 14px 0;
-	padding: 16px 0;
+	font-size: 1.8em;
 }
 
 h2 {
-	font-size: 2.8em;
-	margin: 10px 0;
-	padding: 14px 0;
+	font-size: 1.5em;
 }
 
 h3 {
-	font-size: 2em;
-	margin: 6px 0;
-	padding: 6px 0;
+	font-size: 1.4em;
 }
 
 h4 {
-	font-size: 1.4em;
-	margin: 4px 0;
-	padding: 4px 0;
+	font-size: 1.2em;
+}
+
+a {
+	color: #fafafa;
+	text-decoration: underline;
+}
+
+.headline {
+	text-align: center;
+	margin: 18px 0;
+	padding: 12px 0;
+	border-top: 1px solid #29A2E5;
+	border-bottom: 1px solid #29A2E5;
+}
+
+.articleImg {
+	margin: 14px;
+	max-width: 420px;
+}
+
+main ul {
+	margin: 6px;
+	padding: 0 0 0 24px;
 }

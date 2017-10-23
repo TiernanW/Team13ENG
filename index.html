@@ -8,36 +8,85 @@
 </head>
 
 <body>
-	<header id="top">
-		<div class="wrapper">
+	<div class="wrapper">
+		<header id="top">
+			<div id="logo">
+				<img src="images/logo.png" alt="Systems and Networks">
+			</div>
+			<nav id="navi">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Research</a></li>
+					<li><a href="#">People</a></li>
+					<li><a href="history.html">History</a></li>
+					<li><a href="#">Contacts</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="carousel">
+			<div class="carSlide" style="background:url('images/carousel/1.jpg')">
+				<div class="carDescrip">
+					<a href="#">How Networking Is Influencing Our Lives</a>
+				</div>
+			</div>
+			<a class="back" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 		</div>
-	</header>
-	<nav id="navi">
-		<div class="wrapper">
-		</div>
-	</nav>
-	<div style="clear:both"></div>
-	<div id="content">
-		<div class="wrapper">
+		<section id="content">
 			<main>
-				<h1>Systems and Networks</h1>
-				<p>This is a paragraph of text underneath the header 1 element of the webpage.  Some more text...</p>
-				<h2>Header 2 Tag</h2>
-				<p>This is another paragraph of text underlying the header 2 tag...</p>
-				<p>A paragraph that is underneath another paragraph.</p>
-				<h3>Header 3 Tag</h3>
-				<p>More writing...</p>
+				<div class="mainModule">
+					<div class="rowFixer">
+						<div class="smallCol">
+							<h2>Research Divisions</h2>
+							<ul>
+								<li>First Research Topic</li>
+								<li>Second Topic</li>
+								<li>Another Topic</li>
+								<li>The Finale Topic</li>
+							</ul>
+						</div>
+						<div class="thirdCol">
+							<h2>In a Nutshell...</h2>
+							<p>This could be some text that gives an explanation about what Systems and Networks are, and how they link.  This web page will give insights into the people and the research and what's next...</p>
+							<p>Some more writing is here.  More text.</p>
+						</div>
+					</div>
+				</div>
+				<div class="mainModule">
+					<h2>Latest In Systems & Networks</h2>
+					<div class="smallCol newsBrief" style="background:url('images/news/1.jpg')">
+						<div class="newsDescrip">
+							<h3><a href="#">Article With A Title</a></h3>
+							<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
+						</div>
+					</div>
+					<div class="smallCol newsBrief" style="background:url('images/news/1.jpg')">
+						<div class="newsDescrip">
+							<h3><a href="#">Article With A Title: Longer Title on this one</a></h3>
+							<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
+						</div>
+					</div>
+					<div class="smallCol newsBrief" style="background:url('images/news/1.jpg')">
+						<div class="newsDescrip">
+							<h3><a href="#">An average kind of title</a></h3>
+							<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
+						</div>
+					</div>
+				</div>
+				<div class="mainModule">
+					<h2>Some other header</h2>
+					<div class="fullcol">
+						<p>This a full width column that spans the whole page.</p>
+					</div>
+				</div>
 			</main>
-			<aside id="sidebar">
-				<h4>Heading 4</h4>
-				<p>Para in sidebar...</p>
-			</aside>
-		</div>
+		</section>
+		<div style="clear:both"></div>
+		<footer id="bottom">
+			&copy; Team 13 2017<br>
+			Engineering Challenge #1
+		</footer>
 	</div>
-	<footer id="bottom">
-		<div class="wrapper">
-		</div>
-	</footer>
 </body>
 
 </html>
