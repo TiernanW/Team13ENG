@@ -11,7 +11,7 @@ html, body {
 
 body {
 	font-family: 'Segoe UI', Arial, Times New Roman, sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 	background: #fafafa;
 	color: #0C2D40;
 }
@@ -19,7 +19,7 @@ body {
 /* header styling */
 
 #top {
-	height: 60px;
+	min-height: 60px;
 }
 
 #content::after {
@@ -30,11 +30,10 @@ body {
 
 #bottom {
 	width: 100%;
+	margin: 20px 0 0 0;
+	padding: 20px;
 	border-top: 1px dashed #0C2D40;
-	margin: 20px 0;
-	padding: 10px 0;
 	text-align: center;
-	border-bottom: 4px solid #0C2D40;
 }
 
 #logo {
@@ -55,7 +54,6 @@ body {
 }
 
 #navi ul li {
-	display: inline;
 	margin: 0 0 0 20px;
 	padding: 0;
 }
@@ -81,6 +79,17 @@ body {
 }
 
 /* News */
+
+#news-strip {
+	background: #eaeaea;
+	padding: 20px;
+}
+
+#news-strip h2 {
+	color: #222;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
 
 .news-p {
 	height: 220px;
@@ -112,6 +121,14 @@ body {
 .news-d p {
 	margin: 8px;
 	padding: 0;
+}
+
+.news-side {
+	border-left: 1px solid #ccc;
+}
+
+.news-article {
+	padding: 0 20px 0 0;
 }
 
 /* Carousel */ 
@@ -191,12 +208,17 @@ a {
 	text-decoration: underline;
 }
 
-.headline {
-	text-align: center;
+#article-top {
 	margin: 18px 0;
 	padding: 12px 0;
 	border-top: 1px solid #29A2E5;
 	border-bottom: 1px solid #29A2E5;
+}
+
+.headline {
+	text-align: center;
+	margin:  0;
+	padding: 12px 0;
 }
 
 .articleImg {

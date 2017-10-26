@@ -11,15 +11,22 @@
 	padding: 0 12px;
 }
 
-.news-p { margin: 6px 0; }
-
 .news-p {
-	width: 98.8%;
+	width: 97.6%;
 	max-width: 480px;
+	margin: 6px 0;
+}
+
+.news-side {
+	padding: 0;
 }
 
 h2 {
 	text-align: center;
+}
+
+#navi ul li {
+	display: block;
 }
 
 [class*="col-"] {
@@ -32,5 +39,12 @@ h2 {
     .col-m { width: 66.6%; }
     .col-l { width: 100%; }
 	.news-p { margin: 0; }
+	.news-side { padding: 0 20px; }
 	h2 { text-align: left; }
+}
+
+@media only screen and (min-width: 820px) {
+	#navi ul li {
+		display: inline;
+	}
 }

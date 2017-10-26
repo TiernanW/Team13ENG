@@ -10,94 +10,101 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrappedr">
 		<div class="module">
-			<header id="top" class="col-l">
-				<div id="logo">
-					<img src="images/logo.png" alt="Systems and Networks">
-				</div>
-				<nav id="navi">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">Research</a></li>
-						<li><a href="#">People</a></li>
-						<li><a href="history.html">History</a></li>
-						<li><a href="#">Contacts</a></li>
-					</ul>
-				</nav>
-			</header>
+			<div class="wrapper">
+				<header id="top" class="col-l">
+					<div id="logo" class="col-s">
+						<img src="images/logo.png" alt="Systems and Networks">
+					</div>
+					<!--<a id="nav-but"><img src="images/mobilenav.png" alt="activate mobile menu"></a>-->
+					<div class="col-m">
+						<nav id="navi">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="#">New Research</a></li>
+								<li><a href="#">People</a></li>
+								<li><a href="history.html">History</a></li>
+								<li><a href="#">About Us</a></li>
+							</ul>
+						</nav>
+						<div style="clear:both"></div>
+					</div>
+				</header>
+			</div>
 		</div>
 		<div class="module">
-			<div id="carousel" class="col-l">
-				<div class="carSlide" style="background:url('images/carousel/1.jpg');display:block">
-					<div class="carDescrip">
-						<a href="#">How Networking Is Influencing Our Lives</a>
+			<div class="wrapper">
+				<div id="carousel" class="col-l">
+					<div class="carSlide" style="background:url('images/carousel/1.jpg');display:block">
+						<div class="carDescrip">
+							<a href="#">How Networking Is Influencing Our Lives</a>
+						</div>
 					</div>
-				</div>
-				<div class="carSlide" style="background:url('images/carousel/1.jpg');display:none">
-					<div class="carDescrip">
-						<a href="#">How Do We Handle Congestion Efficiently?</a>
+					<div class="carSlide" style="background:url('images/carousel/1.jpg');display:none">
+						<div class="carDescrip">
+							<a href="#">How Do We Handle Congestion Efficiently?</a>
+						</div>
 					</div>
+					<div class="back" onclick="downSlide()">&#10094;</div>
+					<div class="next" onclick="upSlide()">&#10095;</div>
 				</div>
-				<div class="back" onclick="downSlide()">&#10094;</div>
-				<div class="next" onclick="upSlide()">&#10095;</div>
+				<script src="js/carousel.js"></script>
 			</div>
-			<script src="js/carousel.js"></script>
 		</div>
 		<div id="content">
 			<main>
 				<div class="module">
-					<div class="col-s">
-						<h2>Research Divisions</h2>
-						<ul>
-							<li>Congestion Control</li>
-							<li>Second Topic</li>
-							<li>Another Topic</li>
-							<li>The Finale Topic</li>
-						</ul>
-					</div>
-					<div class="col-m">
-						<h2>In a Nutshell...</h2>
-						<p>Systems and Networks is an area that is very prevalent in the world today.  You are using an internet network to access this website, and your phone is probably connected to a WiFi network and a mobile service network.</p>
-						<p>This area of research covers things like how we utilise resources efficiently during high traffic, how networks are structured, the security of the internet, and more.  You can read about these research areas on this website.</p>
-					</div>
-				</div>
-				<div class="module">
-					<h2>Latest In Systems & Networks</h2>
-					<div class="col-s">
-						<div class="news-p" style="background:url('images/news/1.jpg')">
-							<div class="news-d">
-								<h3><a href="#">Article With A Title</a></h3>
-								<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
-							</div>
+					<div class="wrapper">
+						<div class="col-s">
+							<h2>Research Divisions</h2>
+							<ul>
+								<li>Congestion Control</li>
+								<li>Second Topic</li>
+								<li>Another Topic</li>
+								<li>The Finale Topic</li>
+							</ul>
 						</div>
-					</div>
-					<div class="col-s">
-						<div class="news-p" style="background:url('images/news/1.jpg')">
-							<div class="news-d">
-								<h3><a href="#">Article With A Title</a></h3>
-								<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-s">
-						<div class="news-p" style="background:url('images/news/1.jpg')">
-							<div class="news-d">
-								<h3><a href="#">Article With A Title</a></h3>
-								<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
-							</div>
+						<div class="col-m">
+							<h2>In a Nutshell...</h2>
+							<p>Systems and Networks is an area that is very prevalent in the world today.  You are using an internet network to access this website, and your phone is probably connected to a WiFi network and a mobile service network.</p>
+							<p>This area of research covers things like how we utilise resources efficiently during high traffic, how networks are structured, the security of the internet, and more.  You can read about these research areas on this website.</p>
 						</div>
 					</div>
 				</div>
-				<div class="module">
-					<div class="col-l">
-						<h2>Some other header</h2>
-						<p>This a full width column that spans the whole page.</p>
+				<div id="news-strip" class="module">
+					<div class="wrapper">
+						<h2>Latest In Systems & Networks</h2>
+						<div class="col-s">
+							<div class="news-p" style="background:url('images/news/1.jpg')">
+								<div class="news-d">
+									<h3><a href="#">Article With A Title</a></h3>
+									<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-s">
+							<div class="news-p" style="background:url('images/news/1.jpg')">
+								<div class="news-d">
+									<h3><a href="#">Article With A Title</a></h3>
+									<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-s">
+							<div class="news-p" style="background:url('images/news/1.jpg')">
+								<div class="news-d">
+									<h3><a href="#">Article With A Title</a></h3>
+									<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
+								</div>
+							</div>
+						</div>
+						<div style="clear:both"></div>
 					</div>
 				</div>
 			</main>
 		</div>
-		<div class="module">
+		<div class="wrapper">
 			<footer id="bottom" class="col-l">
 				&copy; Team 13 2017<br>
 				Engineering Challenge #1
