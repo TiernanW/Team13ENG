@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Systems and Networks</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+</head>
+
+<body>
+	<header id="top">
+		<nav id="nav">
+			<a href="index.html">Home</a>
+			<a href="history.html" class="other-link">History</a>
+			<a href="research.html" class="other-link">Research</a>
+			<a href="people.html" class="other-link">People</a>
+			<a href="index.html#team" class="other-link">About Us</a>
+			<div id="menuButton" style="position:absolute;top:0;right:0;">B</div>
+			<script src="js/respnav.js"></script>
+		</nav>
+	</header>
+	<section id="pageIntro" style="background:url('img/historybg.jpg') bottom fixed">
+		<h1 style="z-index:60">
+			Path Choice and Internet Architecture
+		</h1>
+		<span class="helper">Image: http://www.industrypdx.com/inspire/human-interaction/</span>
+	</section>
+	<section id="content">
+		<div class="row">
+			<div class="f-60">
+				<p>This area of research focuses on how we can combat congestion and reduce strain on the internet’s BGP.  Current research at UCL focuses on controlling congestion on the end-user systems.</p>
+				<div id="key-people" class="drop-info">
+					<h2>Key People</h2>
+					<div class="expanse">
+						<div class="profile">
+							<h3>Mark Handley</h3>
+							<p>Mark Handley is a professor of Networked Systems at UCL, which he joined in 2003.  He was the leader of the Network Research group from 2003 to 2010, and has received 
+							the Royal Society Wolfson Research award.</p>
+							<h3>Damon Wischik</h3>
+							<p>Damon is a university lecturer at the University of Cambridge.  His research interests also include looking at big data.</p>
+							<h3>Marcelo Bagnulo Braun</h3>
+							<p>Marcelo is a professor at Universidad Carlos III de Madrid.  His research interests include scalable multihoming in IPv6.</p>
+						</div>
+					</div>
+				</div>
+				<div id="history" class="drop-info">
+					<h2>History</h2>
+					<div class="expanse">
+						<p>In the 1960s work was carried out on the 'ARPAnet'.  This was the predecessor to the internet and was an experimental network to share resources between universities, as a solution to a lack of funds. 
+						In 1969, the first message was sent from UCLA to Stanford and simply said 'lo', but it was a start.  UCL was the first place outside of the US to have a connection to the ARPAnet.</p>
+						<p>The internet became commercially available in the 1990s, and this was exciting because it was a new way for people to share information.  However, in recent years the internet has obviously become 
+						very crowded, and as a result the internet slows down during congestion.  Current research aims to solve this problem.</p>
+						<p><i class="jargon">TCP</i> is the protocol (set procedure) currently used to control the sending and receiving of <i class="jargon">packets</i> over the internet. It was invented by Bob Kahn 
+						and Vint Cerf in the 1970s. (2) It was then in the 1980s that TCP/IP was declared as 
+						standard for the US military. (2)  There have been developments since this time, but essentially it is the same protocol used today, which all popular operating systems include.</p>
+					</div>
+				</div>
+				<div id="issues" class="drop-info">
+					<h2>Current Issues</h2>
+					<div class="expanse">
+						<ul>
+							<li><strong>Scalability:</strong> The global <i class="jargon">Border Gateway Protocol (BGP)</i> is not in an optimal state.  This table is filled with IP
+							address prefixes, and some of them are more specific than others.  For example, 125.68.45 is more specific than 
+							125.68.  Around half the entries in the BGP table are these more specific prefixes.  In a sense, this data could be 
+							considered redundant because the less specific prefix should suffice for routing. ISPs are concerned about the rate at which the BGP is growing.</li>
+							<li><strong>Slow failure recovery:</strong> The BGP does not update immediately whenever there are network failures. 
+							This means that packets may be routed along the broken path for a small time frame when the network first initially 
+							goes down.  This can disrupt the user experience.</li>
+						</ul>
+					</div>
+				</div>
+				<div id="focus" class="drop-info">
+					<h2>Goals and Focus</h2>
+					<div class="expanse">
+						<p>UCL have proposed using a multipath-capable <i class="jargon">Transmission Control Protocol (TCP)</i>.  This would work by having the sender and receiver of data packets both multihomed.  This means that they would have multiple 
+						IP addresses. When they first interact, these IP addresses could all be exchanged, allowing multiple paths to be set up.  One advantage of this is that if a packet is dropped, 
+						the system can respond more quickly and resend the packet on another path.</p>
+						<p>UCL have also suggested that congestion should be controlled by <i>Explicit Congestion Notifications (ECN)</i> markers.  This would allow the transmission rate to incrementally steadily, 
+						and once a ECN is sent, or packet loss is detected, the transmission rate could be cut.</p>
+					</div>
+				</div>
+			</div>
+			<script src="js/dropinfo.js"></script>
+			<div id="sidebar" class="f-40">
+				<video style="width:100%;" controls>
+					<source src="vid/tcp.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<h3>Jargon Buster</h3>
+				<ul class="boxed-list">
+					<li><strong>TCP:</strong> Transmission Control Protocol.  A set of rules that control how information is set over the internet.</li>
+					<li><strong>BGP:</strong> Border Gateway Protocol. This is the internet's way of routing traffic through the internet by 
+					connecting <i>autonomous systems</i>.  The idea is pick the shortest path.</li>
+					<li><strong>Autonomous System:</strong> This is a network of computers that make up the network of the internet.  This is 
+					why we refered to the internet as a "network of networks."  These sub-networks could be part of your ISP for example.</li>
+					<li><strong>ECN:</strong> Explicit Congestion Notifications.  These are markers in a packet that simply indicate congestion on the path.</li>
+				</ul>
+				<h3>Reference Links</h3>
+				<ol>
+					<li><a href="http://haig.cs.ucl.ac.uk/staff/M.Handley/papers/respool-ccr.pdf">http://haig.cs.ucl.ac.uk/staff/M.Handley/papers/respool-ccr.pdf</a></li>
+					<li><a href="http://history-computer.com/Internet/Maturing/TCPIP.html">http://history-computer.com/Internet/Maturing/TCPIP.html</a></li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<footer id="bottom" class="inner-container">
+		<div class="f-100">
+			&copy; Team 13. Designed for Engineering Challenge 1.
+		</div>
+	</footer>
+</body>

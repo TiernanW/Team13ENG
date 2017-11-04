@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Systems and Networks</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+</head>
+
+<body>
+	<header id="top">
+		<nav id="nav">
+			<a href="index.html">Home</a>
+			<a href="history.html" class="other-link">History</a>
+			<a href="research.html" class="other-link">Research</a>
+			<a href="people.html" class="other-link">People</a>
+			<a href="index.html#team" class="other-link">About Us</a>
+			<div id="menuButton" style="position:absolute;top:0;right:0;">B</div>
+			<script src="js/respnav.js"></script>
+		</nav>
+	</header>
+	<section id="pageIntro" style="background:url('img/historybg.jpg') bottom fixed">
+		<h1 style="z-index:60">
+			Security and Encryption
+		</h1>
+		<span class="helper">Image: http://www.industrypdx.com/inspire/human-interaction/</span>
+	</section>
+	<section id="content">
+		<div class="row">
+			<div class="f-60">
+				<p>Recently there has been an uproar in the networking community because of an encryption protocol called WPA2, which is the most secure form of wifi-encryption currently available, being broken. 
+				This was due to the publication of the “Krack Article” which was released detailing certain aspects of the attack but stopping short of explaining it in full. This was to give companies time to 
+				patch the vulnerabilities before it affected their users. To understand the full effects of this research paper on the networking world, we need to first step back into history and talk about one 
+				of the first widely used encryption protocols, WEP. </p>
+				<div id="history" class="drop-info">
+					<h2>History</h2>
+					<div class="expanse">
+						<p>Wired Equivalency Protocol (WEP) was one of the first widely used encryption protocols that provided confidentiality when communicating with other computers over a network. 
+						However, encryption has a major flaw, as no matter what algorithm is used, the message will inevitably be decrypted. This means that hackers can 
+						always break encryption because encryption is built as a two-way system. This happened with WEP in 2001 with a paper from the University of California Berkeley that was published detailing its 
+						weaknesses. It states that the main problems with WEP is that: </p> 
+						<blockquote>“the initialization vector in WEP is a 24-bit field, which is sent in the cleartext part of a message. Such a small space of 
+						initialization vectors guarantees the reuse of the same key stream.“(1) “This allows an attacker to collect two ciphertexts that are encrypted with the same key stream and perform statistical 
+						attacks to recover the plaintext.” (1)</blockquote>
+						<p>Essentially, this states that through the reuse of keys due to a small sample space, a statistical analysis can be conducted in order to get the wifi 
+						password. This paper began the change from WEP to WiFi Protected Access (WPA). Originally created as an addition to WEP, it became its own security protocol with WPA2. 
+						WPA was the patch that developers put out in order to secure WEP. The main addition was the use of TKIP or Temporal Key Integrity Protocol which provides a unique encryption key for every 
+						packet sent across a network, preventing key attack as the packet keys depend on another randomized key made of the session key and initialization vector.</p>
+					</div>
+				</div>
+				<div id="issues" class="drop-info">
+					<h2>Krack</h2>
+					<div class="expanse">
+						<p>As you can see, wifi protocols have been broken before and recently WPA2 was broken by a key reinstallation attack or krack for short. In a paper discovered by Mathy Vanhoef and 
+						Frank Piessens of imec-DistriNet, KU Leuven, the introduce this new concept. It states that:</p>
+						<blockquote>“All protected Wi-Fi networks use the 4-way handshake to generate a fresh session key. So far, this 14-year-old handshake has remained free from attacks, and is even 
+						proven secure. However, we show that the 4-way handshake is vulnerable to a key reinstallation attack. Here, the adversary tricks a victim into reinstalling an already-in-use key. 
+						This is achieved by manipulating and replaying handshake messages. When reinstalling the key, associated parameters such as the incremental transmit packet number (nonce) and receive 
+						packet number (replay counter) are reset to their initial value.”(2) “The impact depends on the handshake being attacked, and the data-confidentiality protocol in use.”(2) 
+						“Simplified, against AES-CCMP an adversary can replay and decrypt (but not forge) packets. This makes it possible to hijack TCP streams and inject malicious data into them. Against 
+						WPATKIP and GCMP the impact is catastrophic: packets can be replayed, decrypted, and forged. Because GCMP uses the same authentication key in both communication directions, it is 
+						especially affected. Finally, we confirmed our findings in practice, and found that every Wi-Fi device is vulnerable to some variant of our attacks. Notably, our attack is 
+						exceptionally devastating against Android 6.0: it forces the client into using a predictable all-zero encryption key”(2)</blockquote>
+						<p>Essentially what is happening is that a 4-way handshake is used in order to generate session keys. However, by throwing errors and say that you missed certain handshakes, you can 
+						reset certain values to predictable numbers and use these numbers to mess with the encryption process in ways that were not intended. By manipulating these handshakes, depending on what 
+						handshake is used, we can get different parts of each encryption method and use them in different ways. This is because there is no standard for how networks deal with re-transmitting passwords. 
+						This causes certain operating systems such as Windows and Mac OS to not accept retransmitted handshake messages and others to accept them such as Android 6.0. However, if you are worried about 
+						your data being stolen, don’t be alarmed yet. This was just a proof of concept research paper and the exact method of doing this has not been revealed yet. Essentially this paper was given to 
+						developers of networks long before release allowing them to provide patches for the general public. However, others might have known about this attack long before the researchers discovered it 
+						and might have been using it for quite some time. If you are truly concerned then I would suggest changing your passwords otherwise you can continue using the internet as normal, but now with a 
+						greater appreciation for encryption.</p>
+					</div>
+				</div>
+			</div>
+			<script src="js/dropinfo.js"></script>
+			<div id="sidebar" class="f-40">
+				<video style="width:100%;" controls>
+					<source src="vid/security.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<h3>Jargon Buster</h3>
+				<ul class="boxed-list">
+					<li><strong>WPA2:</strong> The currently most widely used method of wifi encryption.</li>
+					<li><strong>WEP:</strong> The predecessor, broken in 2001, to WPA2.</li>
+					<li><strong>WEP:</strong> The predecessor, broken in 2001, to WPA2.</li>
+				</ul>
+				<h3>Reference Links</h3>
+				<ol>
+					<li><a href="http://www.isaac.cs.berkeley.edu/isaac/wep-faq.html">http://www.isaac.cs.berkeley.edu/isaac/wep-faq.html</a></li>
+					<li><a href="https://papers.mathyvanhoef.com/ccs2017.pdf">https://papers.mathyvanhoef.com/ccs2017.pdf</a></li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<footer id="bottom" class="inner-container">
+		<div class="f-100">
+			&copy; Team 13. Designed for Engineering Challenge 1.
+		</div>
+	</footer>
+</body>

@@ -5,113 +5,152 @@
 <head>
 	<title>Systems and Networks</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/resp.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-	<div class="wrappedr">
-		<div class="module">
-			<div class="wrapper">
-				<header id="top" class="col-l">
-					<div id="logo" class="col-s">
-						<img src="images/logo.png" alt="Systems and Networks">
-						<a id="nav-but" onClick="toggleMenu()"><img src="images/menuicon.png" alt="activate mobile menu"></a>
-					</div>
-					<script src="js/navi.js"></script>
-					<div class="col-m">
-						<nav id="navi">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="#">New Research</a></li>
-								<li><a href="#">People</a></li>
-								<li><a href="history.html">History</a></li>
-								<li><a href="#">About Us</a></li>
-							</ul>
-						</nav>
-						<div style="clear:both"></div>
-					</div>
-				</header>
+<body id="b">
+	<header id="top">
+		<nav id="nav" class="topNav">
+			<a href="index.html">Home</a>
+			<a href="history.html">History</a>
+			<a href="research.html">Research</a>
+			<a href="people.html">People</a>
+			<a href="index.html#team">About Us</a>
+			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
+			<script src="js/respnav.js"></script>
+		</nav>
+	</header>
+	<section id="intro">
+		<h1 id="logo" style="z-index:60">
+			Systems & Networks
+		</h1>
+		<div id="wireless" style="left:42%;top:54%;position:absolute;z-index:40;display:none">
+			<img src="img/wireless.png" alt="parallax">
+		</div>
+		<div id="downAr" style="left: 49%;bottom: 8%;position:absolute">
+			<img src="img/down-arrow-w.png" alt="parallax">
+		</div>
+	</section>
+	<!-- JS for parallax intro -->
+	<script>
+		var logo = document.getElementById('logo');
+		var wire = document.getElementById('wireless');
+		var arrow = document.getElementById('downAr');
+		
+		function parIntro() {
+			var offset = window.pageYOffset;
+			logo.style.top = 40 - (offset * 0.14) + '%';
+			wire.style.top = 54 - (offset * 0.25) + '%';
+			arrow.style.bottom = 8 + (offset * 0.4) + '%';
+		}
+		
+		window.addEventListener('scroll', parIntro);
+	</script>
+	<section id="content">
+		<div class="row">
+			<div class="f-40">
+				<video style="width:100%;height:100%" controls>
+					<source src="vid/history.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<div class="f-60">
+				<h2>What is "Systems and Networks"?</h2>
+				<p>Systems and Networks is an area that is very prevalent in the world today.  Whether you are accessing this website through WiFi or Ethernet, you are connected to the internet which is a network.  In fact, its a network of networks!</p>
+				<p>This area of research covers things like how we utilise resources efficiently during high traffic to combat congestion, how networks are structured, the security of the internet, and more.  You can read about these research areas and their history on this website.</p>
+				<p class="helper">Video Reference: <a href="https://www.youtube.com/watch?v=h8K49dD52WA">https://www.youtube.com/watch?v=h8K49dD52WA</a></p>
 			</div>
 		</div>
-		<div class="module">
-			<div class="wrapper">
-				<div id="carousel" class="col-l">
-					<div class="carSlide" style="background:url('images/carousel/1.jpg');display:block">
-						<div class="carDescrip">
-							<a href="#">How Networking Is Influencing Our Lives</a>
-						</div>
-					</div>
-					<div class="carSlide" style="background:url('images/carousel/2.jpg');display:none">
-						<div class="carDescrip">
-							<a href="#">How Do We Handle Congestion Efficiently?</a>
-						</div>
-					</div>
-					<div class="back" onclick="downSlide()">&#10094;</div>
-					<div class="next" onclick="upSlide()">&#10095;</div>
+		<div class="wrapped">
+			<div class="row">
+				<div class="f-100">
+					<h2>Current Research</h2>
 				</div>
-				<script src="js/carousel.js"></script>
+			</div>
+			<div class="row">
+				<div class="f-100" id="latest">
+					<div id="news-previewer" class="inner-container">
+						<div class="f-25" style="background-image:url('img/news/security.jpg')">
+							<div class="news-d">
+								<span class="helper">Web Security</span>
+								<h3><a href="security.html">The Krack Attack and the Failure of WPA2</a></h3>
+							</div>
+						</div>
+						<div class="f-25" style="background-image:url('img/news/pathchoice.jpg')">
+							<div class="news-d">
+								<span class="helper">Web Architecture</span>
+								<h3><a href="pathchoice.html">Tackling Issues with Congestion and Scalability</a></h3>
+							</div>
+						</div>
+						<div class="f-25">
+							<div class="news-d">
+								<span class="helper">Category</span>
+								<h3><a href="#">This is an average article title</a></h3>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="content">
-			<main>
-				<div class="module">
-					<div class="wrapper">
-						<div class="col-s">
-							<h2>Research Divisions</h2>
-							<ul>
-								<li>Congestion Control</li>
-								<li>Second Topic</li>
-								<li>Another Topic</li>
-								<li>The Finale Topic</li>
-							</ul>
-						</div>
-						<div class="col-m">
-							<h2>In a Nutshell...</h2>
-							<p>Systems and Networks is an area that is very prevalent in the world today.  You are using an internet network to access this website, and your phone is probably connected to a WiFi network and a mobile service network.</p>
-							<p>This area of research covers things like how we utilise resources efficiently during high traffic, how networks are structured, the security of the internet, and more.  You can read about these research areas on this website.</p>
-						</div>
-					</div>
-				</div>
-				<div id="news-strip" class="module">
-					<div class="wrapper">
-						<h2>Latest In Systems & Networks</h2>
-						<div class="col-s">
-							<div class="news-p" style="background:url('images/news/1.jpg')">
-								<div class="news-d">
-									<h3><a href="#">Article With A Title</a></h3>
-									<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-s">
-							<div class="news-p" style="background:url('images/news/1.jpg')">
-								<div class="news-d">
-									<h3><a href="#">Article With A Title</a></h3>
-									<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-s">
-							<div class="news-p" style="background:url('images/news/1.jpg')">
-								<div class="news-d">
-									<h3><a href="#">Article With A Title</a></h3>
-									<p>A paragraph giving a brief summary of what the article contains.  Another sentence is here.</p>
-								</div>
-							</div>
+		<div class="row">
+			<div class="f-100">
+				<h2>Meet Team 13</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="f-100" id="team">
+				<!--<h2>Meet Team 13</h2>-->
+				<div class="inner-container">
+					<div class="f-50 profile">
+						<img src="img/tiernan.jpg" alt="face" class="profile-img">
+						<div class="profile-desc">
+							<h3>Duncan Rowe</h3>
+							<p>This is a paragraph about Duncan and his role(s). Going onto multiple lines here to check padding.</p>
 						</div>
 						<div style="clear:both"></div>
 					</div>
+					<div class="f-50 profile">
+						<img src="img/tiernan.jpg" alt="face" class="profile-img">
+						<div class="profile-desc">
+							<h3>Tiernan Watson</h3>
+							<p>Tiernan is the web designer on this project.  On this project he learned about using the CSS 3 flex method of responsive web design, as opposed to the grid system.</p>
+						</div>
+					</div>
+					<div class="f-50 profile">
+						<img src="img/tiernan.jpg" alt="face" class="profile-img">
+						<div class="profile-desc">
+							<h3>Elena Aleksiva</h3>
+							<p>This is a paragraph about Duncan and his role(s).</p>
+						</div>
+					</div>
+					<div class="f-50 profile">
+						<img src="img/tiernan.jpg" alt="face" class="profile-img">
+						<div class="profile-desc">
+							<h3>Yin Long Ho</h3>
+							<p>This is a paragraph about Duncan and his role(s).</p>
+						</div>
+					</div>
+					<div class="f-50 profile">
+						<img src="img/tiernan.jpg" alt="face" class="profile-img">
+						<div class="profile-desc">
+							<h3>Frank Liu</h3>
+							<p>This is a paragraph about Duncan and his role(s).</p>
+						</div>
+					</div>
+					<div class="f-50 profile">
+						<!-- Stops last profile expanding too wide -->
+					</div>
 				</div>
-			</main>
+			</div>
 		</div>
-		<div class="wrapper">
-			<footer id="bottom" class="col-l">
-				&copy; Team 13 2017<br>
-				Engineering Challenge #1
-			</footer>
+	</section>
+	<footer id="bottom" class="inner-container">
+		<div class="f-100">
+			&copy; Team 13. Designed for Engineering Challenge 1.
+			<br><br>
+			Background image credit to: www.transparenttextures.com
 		</div>
-	</div>
+	</footer>
 </body>
-
-</html>

@@ -1,251 +1,323 @@
-/* 	CSS File for Team 13 - Systems and Networks */
-	
+/* TEAM 13 CSS (C) Engineering Challenge 1 */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
 * {
 	box-sizing: border-box;
 }
-	
+
 html, body {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
 }
 
 body {
-	font-family: 'Segoe UI', Arial, Times New Roman, sans-serif;
-	font-size: 14px;
-	background: #fafafa;
-	color: #0C2D40;
+	background: #fff;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-/* header styling */
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.wrapped {
+	width: 100%;
+	margin-top: 24px;
+	padding: 0;
+}
+
+/* Main sections */
 
 #top {
-	min-height: 60px;
-}
-
-#content::after {
-	content: "";
-	clear: both;
-	display: block;
+	width: 100%;
+	min-height: 50px;
+	position: fixed;
+	top: 0;
+	z-index: 100;
 }
 
 #bottom {
 	width: 100%;
-	margin: 20px 0 0 0;
-	padding: 20px;
-	border-top: 1px dashed #0C2D40;
+	padding: 80px 0;
 	text-align: center;
 }
 
-#logo {
-	float: left;
-	height: 60px;
-}
-
-#navi ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	line-height: 60px;
-}
-
-#navi ul li {
-	margin: 0 0 0 20px;
-	padding: 0;
-}
-
-#navi a {
-	text-decoration: none;
-	font-weight: bold;
-	color: #29A2E5;
-}
-
-/* content styling */
-
-.module {
+#intro, #pageIntro {
 	width: 100%;
-	margin: 14px 0;
 	position: relative;
 }
-
-.module::after {
-	content: "";
-	clear: both;
-	display: block;
+	
+#intro {
+	height: 100%;
+	max-height: 1080px;
+	background: url("../img/bg2.jpg") fixed;
 }
 
-/* News */
-
-#news-strip {
-	background: #eaeaea;
-	padding: 20px;
+#pageIntro {
+	height: 300px;
 }
 
-#news-strip h2 {
-	color: #222;
-	margin: 0 0 20px 0;
+#pageIntro .helper {
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+	color: #fff;
+}
+
+#logo, #pageIntro h1 {
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	text-align: center;
 	padding: 0;
 }
 
-.news-p {
-	height: 220px;
-	background: #2387BF center;
+#logo {
+	top: 40%;
+	font-size: 5em;
+}
+
+#pageIntro h1 {
+	top: 46%;
+	font-size: 3.2em;
+}
+
+.row, #pageTitle {
+	margin: 0 auto;
+	max-width: 1280px;
+	text-align: justify;
+}
+
+.inner-container {
+	width: 100%;
+	align-content: center;
+}
+
+.row, #pageTitle, .inner-container {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.f-40, .f-60, .f-100, .f-50, .f-75, .f-25 {
+	min-width: 420px;
+	flex-grow: 1;
+	padding: 16px;
+}
+
+.f-25 {
+	width: 25%;
+}
+
+.f-40 {
+	width: 40%;
+}
+
+.f-50 {
+	width: 50%;
+}
+
+.f-60 {
+	width: 60%;
+}
+
+.f-75 {
+	width: 75%;
+}
+
+.f-100 {
+	width: 100%;
+}
+
+#news-previewer .f-25 {
+	height: 260px;
+	min-width: 280px;
+	max-width: 410px;
+	margin: auto;
+	padding: 0;
+	background: url("../img/news/1.jpg") center;
 	position: relative;
-	color: #fafafa;
 }
 
 .news-d {
 	position: absolute;
 	bottom: 0;
-	background: url("../images/carousel/transbg.png");
-	width: 90%;
+	width: 95%;
+	padding: 10px;
+	background: #fff;
+	transition: 0.3s;
 }
 
 .news-d h3 {
-	margin: 8px;
+	margin: 0;
 	padding: 0;
-	font-size: 1.4em;
-	font-weight: bold;
-	text-decoration: none;
+	text-transform: capitalize;
 }
 
-.news-d a {
-	text-decoration: none;
-	color: #fafafa;
+.news-d h3 a {
+	margin: 0;
+	padding: 0;
+	font-size: 1.4rem;
+	text-shadow: none;
 }
 
-.news-d p {
-	margin: 8px;
+.news-item {
+	height: 200px;
+}
+
+.helper {
+	margin-top: 16px;
+	font-size: 0.8em;
+}
+
+.profile {
+	margin: 0 0 30px 0;
 	padding: 0;
 }
 
-.news-side {
-	border-left: 1px solid #ccc;
+.profile-img {
+	float: left;
+	margin: 0;
+	width: 24%;
+	border-radius: 100%;
 }
 
-.news-article {
-	padding: 0 20px 0 0;
+.drop-img {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
 }
 
-/* Carousel */ 
-
-#carousel {
-	width: 100%;
-	background: #2387BF;
-	height: 280px;
-	position: relative;
-	color: #fafafa;
+.profile-desc {
+	float:right;
+	width: 72%;
+	padding-right: 30px;
 }
 
-.carSlide {
+/* Nav */
+
+#nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 50px;
+	display: flex;
+	font-weight: 800;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#nav ul li {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	flex-grow: 1;
+	height: 50px;
+	min-width: 240px;
+}
+
+#nav {
+	line-height: 50px;
+	display: flex;
+	text-align: center;
+	font-weight: 800;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#nav a {
+	flex-grow: 1;
+	min-width: 280px;
 	width: 100%;
 	height: 100%;
-	background: center;
 }
 
-.carDescrip {
-	position: absolute;
-	bottom: 0;
-	background: url("../images/carousel/transbg.png");
-	width: 100%;
-}
-
-.carSlide a {
-	margin: 20px;
-	padding: 0;
-	font-size: 1.4em;
-	font-weight: bold;
-	text-decoration: none;
-	display: block;
-}
-
-#carousel .back, #carousel .next {
-	position: absolute;
-	top: 50%;
-	background: url("../images/carousel/transbg.png");
-	width: auto;
-	padding: 20px;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-#carousel .back {
-	left: 0;
-}
-
-#carousel .next {
-	right: 0;
-}
-
-#carousel a {
-	color: #fafafa;
-}
-
-/* Text Styling */
-
-h1, h2, h3, h4 {
-	font-weight: normal;
-	color: #29A2E5;
-}
-
-h1 {
-	font-size: 1.8em;
-}
-
-h2 {
-	font-size: 1.5em;
-}
-
-h3 {
-	font-size: 1.4em;
-}
-
-h4 {
-	font-size: 1.2em;
-}
-
-a {
-	color: #29A2E5;
-	text-decoration: underline;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-#article-top {
-	margin: 18px 0;
-	padding: 12px 0;
-	border-top: 1px solid #29A2E5;
-	border-bottom: 1px solid #29A2E5;
-}
-
-.headline {
-	text-align: center;
-	margin:  0;
-	padding: 12px 0;
-}
+/* Articles */
 
 .drop-info {
-	border-top: 1px solid #444;
-	border-bottom: 1px solid #444;
+	margin: 20px 0;
 }
 
 .drop-info h2 {
-	color: #333;
-	padding-left: 42px;
-	background: url("../images/down-arrow.png") center left no-repeat;
-}
-
-.drop-info h2:hover {
+	text-align: left;
+	margin: 20px 0 20px 12px;
+	padding: 0 0 0 44px;
+	text-shadow: none;
+	background: url("../img/down-arrow.png") no-repeat top left;
 	cursor: pointer;
 }
 
-.articleImg {
-	margin: 14px;
-	max-width: 420px;
+.boxed-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-main ul {
-	margin: 6px;
-	padding: 0 0 0 24px;
+.boxed-list li {
+	margin: 10px 0;
+}
+
+/* Text */
+
+#team h3 {
+	text-align: left;
+	margin: 0.2em 0;
+	font-weight: 600;
+}
+
+h1, h2, h3 {
+	text-align: left;
+	margin: 0;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 2.6em;
+	padding: 0.6em 0;
+}
+
+h2 {
+	font-size: 1.8em;
+	padding: 0.4em 0 0.1em 0;
+}
+
+h3 {
+	font-size: 1.3em;
+	padding: 0.2em 0 0.1em 0;
+}
+
+#sidebar h3 {
+	text-align: center;
+	padding: 0.6em 0 0.1em 0;
+}
+
+p, li {
+	line-height: 1.6em;
+}
+
+li {
+	margin: 10px 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.helper {
+	font-size: 0.6rem;
+	text-transform: uppercase;
+}
+
+.expanse {
+	color: #444;
+	padding: 0 10px;
 }

@@ -1,0 +1,12 @@
+var others = document.getElementById("nav").getElementsByTagName("a");
+document.getElementById("menuButton").addEventListener("click", displayMenu);
+
+function displayMenu() {
+	for(i = 0; i < 5; i++) {
+		if(others[i].style.display == "block") {
+			others[i].style.display = "none";
+		} else {
+			others[i].style.display = "block";
+		}
+	}
+}
