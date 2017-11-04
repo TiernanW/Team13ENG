@@ -21,6 +21,11 @@
 	padding: 0;
 }
 
+#nav-but {
+	display: block;
+	float:right;
+}
+
 h2 {
 	text-align: center;
 }
@@ -29,9 +34,16 @@ h2 {
 	display: block;
 }
 
+#navi {
+	float: none;
+	text-align: center;
+	background: #eaeaea;
+}
+
 [class*="col-"] {
     width: 100%;
 	float: left;
+	word-wrap: break-word;
 }
 
 @media only screen and (min-width: 480px) {
@@ -41,10 +53,11 @@ h2 {
 	.news-p { margin: 0; }
 	.news-side { padding: 0 20px; }
 	h2 { text-align: left; }
-}
-
-@media only screen and (min-width: 820px) {
-	#navi ul li {
-		display: inline;
+	#navi ul li { display: inline; }
+	#nav-but { display: none; }
+	#navi {
+		float: right;
+		text-align: none;
+		background: none;
 	}
 }

@@ -1,5 +1,6 @@
 var slide = 0;
 var slides = document.getElementsByClassName("carSlide");
+ticker();
 			
 function upSlide() {
 	slide += 1;
@@ -23,4 +24,9 @@ function changeSlide(n) {
 		slides[i].style.display = "none";
 	}
 	slides[n].style.display = "block";
+}
+
+function ticker() {
+	setTimeout(ticker, 6400);
+	upSlide();
 }
