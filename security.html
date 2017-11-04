@@ -31,10 +31,15 @@
 	<section id="content">
 		<div class="row">
 			<div class="f-60">
-				<p>Recently there has been an uproar in the networking community because of an encryption protocol called WPA2, which is the most secure form of wifi-encryption currently available, being broken. 
-				This was due to the publication of the “Krack Article” which was released detailing certain aspects of the attack but stopping short of explaining it in full. This was to give companies time to 
-				patch the vulnerabilities before it affected their users. To understand the full effects of this research paper on the networking world, we need to first step back into history and talk about one 
-				of the first widely used encryption protocols, WEP. </p>
+				<div id="introduction" class="drop-info">
+					<h2>Introduction</h2>
+					<div class="expanse">
+						<p>Recently there has been an uproar in the networking community because of an encryption protocol called WPA2, which is the most secure form of wifi-encryption currently available, being broken. 
+						This was due to the publication of the "Krack Article" which was released detailing certain aspects of the attack but stopping short of explaining it in full. This was to give companies time to 
+						patch the vulnerabilities before it affected their users. To understand the full effects of this research paper on the networking world, we need to first step back into history and talk about one 
+						of the first widely used encryption protocols, WEP. </p>
+					</div>
+				</div>
 				<div id="history" class="drop-info">
 					<h2>History</h2>
 					<div class="expanse">
@@ -42,9 +47,9 @@
 						However, encryption has a major flaw, as no matter what algorithm is used, the message will inevitably be decrypted. This means that hackers can 
 						always break encryption because encryption is built as a two-way system. This happened with WEP in 2001 with a paper from the University of California Berkeley that was published detailing its 
 						weaknesses. It states that the main problems with WEP is that: </p> 
-						<blockquote>“the initialization vector in WEP is a 24-bit field, which is sent in the cleartext part of a message. Such a small space of 
-						initialization vectors guarantees the reuse of the same key stream.“(1) “This allows an attacker to collect two ciphertexts that are encrypted with the same key stream and perform statistical 
-						attacks to recover the plaintext.” (1)</blockquote>
+						<blockquote>"the initialization vector in WEP is a 24-bit field, which is sent in the cleartext part of a message. Such a small space of 
+						initialization vectors guarantees the reuse of the same key stream."(1) "This allows an attacker to collect two ciphertexts that are encrypted with the same key stream and perform statistical 
+						attacks to recover the plaintext." (1)</blockquote>
 						<p>Essentially, this states that through the reuse of keys due to a small sample space, a statistical analysis can be conducted in order to get the wifi 
 						password. This paper began the change from WEP to WiFi Protected Access (WPA). Originally created as an addition to WEP, it became its own security protocol with WPA2. 
 						WPA was the patch that developers put out in order to secure WEP. The main addition was the use of TKIP or Temporal Key Integrity Protocol which provides a unique encryption key for every 
@@ -56,14 +61,14 @@
 					<div class="expanse">
 						<p>As you can see, wifi protocols have been broken before and recently WPA2 was broken by a key reinstallation attack or krack for short. In a paper discovered by Mathy Vanhoef and 
 						Frank Piessens of imec-DistriNet, KU Leuven, the introduce this new concept. It states that:</p>
-						<blockquote>“All protected Wi-Fi networks use the 4-way handshake to generate a fresh session key. So far, this 14-year-old handshake has remained free from attacks, and is even 
+						<blockquote>"All protected Wi-Fi networks use the 4-way handshake to generate a fresh session key. So far, this 14-year-old handshake has remained free from attacks, and is even 
 						proven secure. However, we show that the 4-way handshake is vulnerable to a key reinstallation attack. Here, the adversary tricks a victim into reinstalling an already-in-use key. 
 						This is achieved by manipulating and replaying handshake messages. When reinstalling the key, associated parameters such as the incremental transmit packet number (nonce) and receive 
-						packet number (replay counter) are reset to their initial value.”(2) “The impact depends on the handshake being attacked, and the data-confidentiality protocol in use.”(2) 
-						“Simplified, against AES-CCMP an adversary can replay and decrypt (but not forge) packets. This makes it possible to hijack TCP streams and inject malicious data into them. Against 
+						packet number (replay counter) are reset to their initial value."(2) "The impact depends on the handshake being attacked, and the data-confidentiality protocol in use."(2) 
+						"Simplified, against AES-CCMP an adversary can replay and decrypt (but not forge) packets. This makes it possible to hijack TCP streams and inject malicious data into them. Against 
 						WPATKIP and GCMP the impact is catastrophic: packets can be replayed, decrypted, and forged. Because GCMP uses the same authentication key in both communication directions, it is 
 						especially affected. Finally, we confirmed our findings in practice, and found that every Wi-Fi device is vulnerable to some variant of our attacks. Notably, our attack is 
-						exceptionally devastating against Android 6.0: it forces the client into using a predictable all-zero encryption key”(2)</blockquote>
+						exceptionally devastating against Android 6.0: it forces the client into using a predictable all-zero encryption key"(2)</blockquote>
 						<p>Essentially what is happening is that a 4-way handshake is used in order to generate session keys. However, by throwing errors and say that you missed certain handshakes, you can 
 						reset certain values to predictable numbers and use these numbers to mess with the encryption process in ways that were not intended. By manipulating these handshakes, depending on what 
 						handshake is used, we can get different parts of each encryption method and use them in different ways. This is because there is no standard for how networks deal with re-transmitting passwords. 

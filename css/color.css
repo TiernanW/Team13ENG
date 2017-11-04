@@ -85,7 +85,6 @@ body {
 
 .drop-info {
 	border-top: 1px solid #d1d1d1;
-	border-bottom: 1px solid #d1d1d1;
 }
 
 .boxed-list li {
@@ -102,8 +101,4 @@ body {
 	border-top: 1px solid #d1d1d1;
 	border-bottom: 1px solid #d1d1d1;
 	color: #fff;
-}
-
-.wrapped h3, .wrapped h2 {
-
 }
