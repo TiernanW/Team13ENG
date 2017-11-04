@@ -12,7 +12,10 @@ var workIt = function(dropId) {
 	}
 }
 
-for (var i = 0; i < droppers.length; i++) {
+droppers[0].getElementsByTagName("h2")[0].addEventListener("click", workIt.bind(this, droppers[0].id));
+droppers[0].getElementsByClassName("expanse")[0].style.display = "block";
+
+for (var i = 1; i < droppers.length; i++) {
 	droppers[i].getElementsByTagName("h2")[0].addEventListener("click", workIt.bind(this, droppers[i].id));
 	droppers[i].getElementsByClassName("expanse")[0].style.display = "none";
 }
