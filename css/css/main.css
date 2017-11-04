@@ -107,7 +107,7 @@ body {
 }
 
 .f-40, .f-60, .f-100, .f-50, .f-75, .f-25 {
-	min-width: 280px;
+	min-width: 420px;
 	flex-grow: 1;
 	padding: 16px;
 }
@@ -236,7 +236,7 @@ body {
 
 #nav a {
 	flex-grow: 1;
-	min-width: 280px;
+	min-width: 240px;
 	width: 100%;
 	height: 100%;
 }
