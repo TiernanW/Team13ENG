@@ -1,7 +1,7 @@
 /* TEAM 13 CSS (C) Engineering Challenge 1 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech');
 
 * {
 	box-sizing: border-box;
@@ -56,14 +56,15 @@ body {
 #intro {
 	height: 100%;
 	max-height: 1080px;
-	background: url("../img/bg2.jpg") fixed;
+	background: url("../img/bgtest.jpg") fixed top center;
+	background-size: cover;
 }
 
 #pageIntro {
 	height: 300px;
 }
 
-#pageIntro .helper {
+#pageIntro .helper, #intro .helper {
 	position: absolute;
 	bottom: 4px;
 	left: 4px;
@@ -80,7 +81,10 @@ body {
 
 #logo {
 	top: 40%;
-	font-size: 5em;
+	left: 2%;
+	font-size: 10em;
+	max-width: 500px;
+	text-align: left;
 }
 
 #pageIntro h1 {
@@ -156,7 +160,7 @@ body {
 }
 
 .news-d h3 {
-	margin: 0;
+	margin: 5px 0 0 0;
 	padding: 0;
 	text-transform: capitalize;
 }
@@ -283,6 +287,7 @@ h1, h2, h3 {
 h1 {
 	font-size: 2.6em;
 	padding: 0.6em 0;
+	font-family: 'Share Tech', san-serif;
 }
 
 h2 {

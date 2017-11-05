@@ -3,11 +3,7 @@
 
 
 h1 {
-	text-shadow:
-    -1px -1px 0 #222,
-    1px -1px 0 #222,
-    -1px 1px 0 #222,
-    1px 1px 0 #222; 
+
 	color: #fff;
 }
 
@@ -20,12 +16,12 @@ body {
 }
 
 #top {
-	background: #fff;
-	border-bottom: 1px solid #D1D1D1;
+	background: none;
 }
 
 #nav a {
 	transition: 0.2s;
+	color: #fff;
 }
 
 #nav a:hover {
@@ -46,7 +42,6 @@ body {
 
 #logo {
 	color: #fff;
-	text-shadow: 2px 2px 0 #006EAF;
 }
 
 #content {
@@ -71,6 +66,7 @@ body {
 	background: #00436A;
 	padding: 2px 4px;
 	border-radius: 3px;
+	margin: 0;
 }
 
 .news-d h3 a {

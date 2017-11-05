@@ -26,24 +26,20 @@
 		<h1 id="logo" style="z-index:60">
 			Systems & Networks
 		</h1>
-		<div id="wireless" style="left:42%;top:54%;position:absolute;z-index:40;display:none">
-			<img src="img/wireless.png" alt="parallax">
-		</div>
 		<div id="downAr" style="left: 49%;bottom: 8%;position:absolute">
 			<img src="img/down-arrow-w.png" alt="parallax">
 		</div>
+		<span class="helper">IMG Source: https://wallpapertag.com/img/305577</span>
 	</section>
 	<!-- JS for parallax intro -->
 	<script>
 		var logo = document.getElementById('logo');
-		var wire = document.getElementById('wireless');
 		var arrow = document.getElementById('downAr');
 		
 		function parIntro() {
 			var offset = window.pageYOffset;
 			logo.style.top = 40 - (offset * 0.14) + '%';
-			wire.style.top = 54 - (offset * 0.25) + '%';
-			arrow.style.bottom = 8 + (offset * 0.4) + '%';
+			arrow.style.bottom = 8 + (offset * 0.06) + '%';
 		}
 		
 		window.addEventListener('scroll', parIntro);

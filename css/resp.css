@@ -28,4 +28,16 @@
 	#menuButton {
 		display: block;
 	}
+	
+	#news-previewer .f-25 {
+		margin: 10px 0;
+	}
+	
+	h1 {
+		font-size: 3.2em;
+	}
+	
+	#logo {
+		font-size: 6em;
+	}
 }
