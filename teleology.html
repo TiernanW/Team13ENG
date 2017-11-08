@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Systems and Networks</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/resp.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header id="top">
+		<nav id="nav" class="topNav">
+			<a href="index.html">Home</a>
+			<a href="history.html">History</a>
+			<a href="research.html">Research</a>
+			<a href="people.html">People</a>
+			<a href="index.html#team">About Us</a>
+			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
+			<script src="js/respnav.js"></script>
+		</nav>
+	</header>
+	<section id="pageIntro" style="background:url('img/historybg.jpg') bottom fixed">
+		<h1 style="z-index:60">
+			Teleology of Scheduling Algorithms
+		</h1>
+		<span class="helper">Image: http://www.industrypdx.com/inspire/human-interaction/</span>
+	</section>
+	<section id="content">
+		<div class="row">
+			<div class="f-60">
+				<div id="introduction" class="drop-info">
+					<h2>Introduction</h2>
+					<div class="expanse">
+						<p><i class="jargon">Queueing Theory</i> is a branch of mathematics. As you would imagine, in the world of the internet, a lot of information is being sent 
+						and received.  We want the most efficient way to do this.  This section looks at <i class="jargon">scheduling algorithms</i> and what research is being done into them. In particular, 
+						we look at research carried out at UCL, which looks at mathematical models for the behaviour of networks.</p>
+					</div>
+				</div>
+				<div id="key-people" class="drop-info">
+					<h2>What is a Queueing System?</h2>
+					<div class="expanse">
+						<p>Just like a queue which people line up in the real world. In the computer world, packets arrive 
+						a computer network, wait in various queues, receive network services, and finally exit. This 
+						systematic way of treating packets is called the queueing system.</p>
+						<p>Studying queueing system is important as it can greatly affect the time for a network to serve 
+						devices. A badly designed system would lead to a long queue with tons of users waiting to be 
+						served.</p>
+					</div>
+				</div>
+				<div id="history" class="drop-info">
+					<h2>Stability of Queueing System</h2>
+					<div class="expanse">
+						<p>If the packet arrival rate is less than the server capacity, the system will be stable. In 
+						cases where packets are arriving at a rate higher than the server could handle, packet drop may 
+						occur and delay will increase.</p>
+						<p>Better hardware and software would likely result in higher server capacity. More memory 
+						allocated to the server can increase its occupancy. And both can increase the stability of the 
+						queueing network.</p>
+					</div>
+				</div>
+				<div id="issues" class="drop-info">
+					<h2>Current Issues</h2>
+					<div class="expanse">
+						<ul>
+							<li><strong>Scalability:</strong> The global <i class="jargon">Border Gateway Protocol (BGP)</i> is not in an optimal state.  This table is filled with IP
+							address prefixes, and some of them are more specific than others.  For example, 125.68.45 is more specific than 
+							125.68.  Around half the entries in the BGP table are these more specific prefixes.  In a sense, this data could be 
+							considered redundant because the less specific prefix should suffice for routing. ISPs are concerned about the rate at which the BGP is growing.</li>
+							<li><strong>Slow failure recovery:</strong> The BGP does not update immediately whenever there are network failures. 
+							This means that packets may be routed along the broken path for a small time frame when the network first initially 
+							goes down.  This can disrupt the user experience.</li>
+						</ul>
+					</div>
+				</div>
+				<div id="focus" class="drop-info">
+					<h2>Goals and Focus</h2>
+					<div class="expanse">
+						<p>UCL have proposed using a multipath-capable <i class="jargon">Transmission Control Protocol (TCP)</i>.  This would work by having the sender and receiver of data packets both multihomed.  This means that they would have multiple 
+						IP addresses. When they first interact, these IP addresses could all be exchanged, allowing multiple paths to be set up.  One advantage of this is that if a packet is dropped, 
+						the system can respond more quickly and resend the packet on another path.</p>
+						<p>UCL have also suggested that congestion should be controlled by <i>Explicit Congestion Notifications (ECN)</i> markers.  This would allow the transmission rate to incrementally steadily, 
+						and once a ECN is sent, or packet loss is detected, the transmission rate could be cut.</p>
+					</div>
+				</div>
+			</div>
+			<script src="js/dropinfo.js"></script>
+			<div id="sidebar" class="f-40">
+				<video style="width:100%;" controls>
+					<source src="vid/queue.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<span class="helper">https://www.youtube.com/watch?v=Yo7LG_JeJos</span>
+				<h3>Jargon Buster</h3>
+				<ul class="boxed-list">
+					<li><strong>Arrival Rate:</strong> The number of arrivals occuring per unit time.</li>
+					<li><strong>Server Capacity:</strong> Number of packets the server can serve per unit time.</li>
+					<li><strong>Occupancy:</strong> Number of packets in the queueing system (averaged over a long time).</li>
+					<li><strong>Delay:</strong> Time between packet entry and exit (average of many packets).</li>
+				</ul>
+				<h3>Reference Links</h3>
+				<ol>
+					<li><a href="http://web.mit.edu/~devavrat/www/shahwischik.pdf">http://web.mit.edu/~devavrat/www/shahwischik.pdf</a></li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<footer id="bottom" class="inner-container">
+		<div class="f-100">
+			&copy; Team 13. Designed for Engineering Challenge 1.
+		</div>
+	</footer>
+</body>
