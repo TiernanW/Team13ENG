@@ -317,6 +317,13 @@ a {
 	text-decoration: none;
 }
 
+blockquote {
+	border-left: 3px solid #FF8C00;
+	background: #FFB964;
+	margin: 0;
+	padding: 1em;
+}
+
 .helper {
 	font-size: 0.6rem;
 	text-transform: uppercase;
