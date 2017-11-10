@@ -42,9 +42,17 @@
 				<div id="introduction" class="drop-info">
 					<h2>Introduction</h2>
 					<div class="expanse">
-						<p><i class="jargon">Queueing Theory</i> is a branch of mathematics. As you would imagine, in the world of the internet, a lot of information is being sent 
+						<p>Queueing Theory is a branch of mathematics. As you would imagine, in the world of the internet, a lot of information is being sent 
 						and received.  We want the most efficient way to do this.  This section looks at <i class="jargon">scheduling algorithms</i> and what research is being done into them. In particular, 
 						we look at research carried out at UCL, which looks at mathematical models for the behaviour of networks.</p>
+					</div>
+				</div>
+				<div id="key-people" class="drop-info">
+					<h2>Key People</h2>
+					<div class="expanse">
+						<h3>UCL Research Group</h3>
+						<h4>Damon Wischik</h4>
+						<p>Damon is a university lecturer at the University of Cambridge.  His research interests also include looking at big data.</p>
 					</div>
 				</div>
 				<div id="key-people" class="drop-info">
@@ -65,9 +73,9 @@
 					<div class="expanse">
 						<p>There is no one queueing mechanism that works best on all situations. It is the scientists’ job to invent different mechanics for different needs. Below are some commonly seen mechanisms:</p>
 						<ul>
-							<li>First in first out (FIFO): the packet arrived earlier will be served before others. (1)</li>
-							<li>By priority: the packet with the highest priority will be served next. (1)</li>
-							<li>Weighted fair queueing: packets will be given different weights (or priorities), such that more packets with higher weight are served than others. 
+							<li><strong>First in first out (FIFO):</strong> the packet arrived earlier will be served before others. (1)</li>
+							<li><strong>By priority:</strong> the packet with the highest priority will be served next. (1)</li>
+							<li><strong>Weighted fair queueing:</strong> packets will be given different weights (or priorities), such that more packets with higher weight are served than others. 
 							A shorter packet will often have higher priority. (3)</li>
 							<li>A mixture of the above</li>
 						</ul>
@@ -78,7 +86,7 @@
 				<div id="history" class="drop-info">
 					<h2>Stability of Queueing System</h2>
 					<div class="expanse">
-						<p>If the packet arrival rate is less than the server capacity, the system will be stable. In 
+						<p>If the packet <i class="jargon">arrival</i> rate is less than the <i class="jargon">server capacity</i>, the system will be stable. In 
 						cases where packets are arriving at a rate higher than the server could handle, packet drop may 
 						occur and delay will increase.</p>
 						<p>Better hardware and software would likely result in higher server capacity. More memory 
@@ -91,7 +99,7 @@
 					<div class="expanse">
 						<p>MIT and UCL had collaborated to study different queueing algorithms for switched networks. Depending on whether the network is lightly-loaded, critically-loaded or overloaded, 
 						its performance and behavior changed accordingly. The result of the research enabled scientists to develop scheduling algorithms which work near-optimally under all three situations. 
-						These algorithms can be widely applied, including wifi networks, network congestion control, and even real-world road roundabouts.</p>
+						These algorithms can be widely applied, including WiFi networks, network congestion control, and even real-world road roundabouts.</p>
 					</div>
 				</div>
 			</div>
@@ -101,13 +109,14 @@
 					<source src="vid/queue.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
-				<span class="helper">https://www.youtube.com/watch?v=Yo7LG_JeJos</span>
+				<span class="helper">Vid Ref: https://www.youtube.com/watch?v=Yo7LG_JeJos</span>
 				<h3>Jargon Buster</h3>
 				<ul class="boxed-list">
 					<li><strong>Arrival Rate:</strong> The number of arrivals occuring per unit time.</li>
 					<li><strong>Server Capacity:</strong> Number of packets the server can serve per unit time.</li>
 					<li><strong>Occupancy:</strong> Number of packets in the queueing system (averaged over a long time).</li>
 					<li><strong>Delay:</strong> Time between packet entry and exit (average of many packets).</li>
+					<li><strong>Scheduling algorithm:</strong> An algorithm that determines how packets are sent over the internet in terms of time.</li>
 				</ul>
 				<h3>Reference Links</h3>
 				<ol>
