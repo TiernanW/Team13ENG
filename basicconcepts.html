@@ -40,29 +40,31 @@
 		<div class="row">
 			<div class="f-60">
 				<div id="key-people" class="drop-info">
-					<h2>General Internet</h2>
+					<h2>Overview</h2>
 					<div class="expanse">
-						<p>Say you wanted to grab a webpage from a website. If we were to watch your request, it would most likely go from your computer to your wireless access point. From the access point it 
-						would go to your router which would point it to your Internet Service Provider or ISP. From there your website request would be looked up at a Domain Name Server (DNS) which simply connects 
+						<p>Say you wanted to grab a webpage from a server. If we were to watch your request, it would most likely go from your computer to your wireless access point. From the access point it 
+						would go to your router which would point it to your Internet Service Provider or ISP. From there your website request would be looked up at a <i class="jargon">Domain Name Server (DNS)</i> which simply connects 
 						the name of the webpage with an internet address. Your request would then go to this internet address, possibly traversing thousands of miles of land or sea before the web page receives your 
-						request. It would then send a response which your computer would get and combine to show the webpage that you requested.</p>
+						request. It would then send a response which your computer would get use to show the webpage that you requested.</p>
 					</div>
 				</div>
 				<div id="struct" class="drop-info">
 					<h2>Routing</h2>
 					<div class="expanse">
-						<p>Different network structures have different ways to transmit information from one node to other nodes. Routing is the process to select the best way for delivering data and information. 
-						Routing directs information from their source to ultimate destination via intermediate nodes. Usually, intermediate nodes are hardware device like routers, bridges and gateways. Also, 
+						<p>In a network like the internet, different <i class="jargon">autonomous systems</i> make up the nodes of the network.  Different network structures have different ways to transmit information from one node to other nodes. 
+						Routing is the process to select the best way for delivering data and information. 
+						Routing directs information from its source to its final destination via intermediate nodes. Also, 
 						intermediate nodes can store different routes in memory. Each single element can choose the best way to be transferred. For example, we have to transfer information from node 1 to node 6. 
-						There are lots of different ways to deliver the information. The best way is 1-8-7-6. Process of selecting this path is called routing.</p>
+						There are lots of different ways to deliver the information. The best way could be 1 -> 8 -> 7 -> 6. The process of selecting this path is called routing.</p>
 					</div>
 				</div>
 				<div id="introduction" class="drop-info">
 					<h2>OSI Model</h2>
 					<div class="expanse">
+						<img src="img/osi.png" alt="OSI model">
 						<p>The OSI (Open Systems Interconnection) model is a model that describes the complex process of how data is transferred between computers. As you can see the data starts off at 
 						the application layer where it is then deconstructed into smaller and smaller sections eventually reaching the transport layer. The data is then split into smaller sections called 
-						packets which traverse the internet. However these packets are transmitted as simply binary digits and then just pulses of light as they are sent through the cables, sometimes under oceans, 
+						packets which traverse the internet. These packets are transmitted be being sent through cables, sometimes under oceans, 
 						and then reconstructed by your destination into the data you wished to send. The OSI model describes this process and it splits the process of transferring data into seven manageable layers and 
 						describes how each layer contributes to the overall process of sending and receiving data. It is often shown visually in order to help people remember the layers and the order in which they 
 						occur when transmitting and receiving data.</p>
@@ -71,19 +73,19 @@
 				<div id="history" class="drop-info">
 					<h2>TCP and UDP</h2>
 					<div class="expanse">
-						<p>Data on the internet is transferred in the form of packets and how your computer interprets these packets is  based on which protocol you use(TCP or UDP). In general TCP or 
-						Transmission Control Protocol requires all packets be received in order and if a packet is missing it will request that individual packet. This is useful for when you don’t want 
-						missing or dropped frames like when you are watching a movie or listening to music. The other protocol is UDP or User Datagram Protocol which allows dropped packets, which is useful 
-						for streaming services like twitch where it doesn’t really matter if you miss a couple frames. </p>
+						<p>Data on the internet is transferred in the form of packets and how your computer interprets these packets is  based on which protocol you use (TCP or UDP). In general TCP or 
+						Transmission Control Protocol requires all packets be received at the end, kind of like a checklist, and if a packet is missing it will request that individual packet. This is useful for when you don’t want 
+						missing or dropped frames when you are watching a movie. The other protocol is UDP or User Datagram Protocol which allows dropped packets, which is useful 
+						for streaming services like <a href="http://www.twitch.tv">Twitch</a>, where it doesn’t really matter if you miss a couple of frames. The most common is TCP.</p>
 					</div>
 				</div>
 				<div id="handshake" class="drop-info">
 					<h2>3-Way Handshake</h2>
 					<div class="expanse">
-						<p>Creating a connection between a computer and server is difficult. In order to combat this, a 3 way handshake was developed and is used today. First your computer sends to the server a SYN 
-						packet to the server, asking it to develop a connection. However after sending the packet, the computer has no idea if the server received the data. Therefore the server sends back a SYN/ACK 
+						<p>Creating a connection between a computer and server is difficult. In order to combat this, the 3 way handshake was developed and is used today. First your computer sends a SYN 
+						packet to the server, asking it to develop a connection. However, after sending the packet, the computer has no idea if the server received the data. Therefore the server sends back a SYN/ACK 
 						packet which says that it did receive your request and that you can create a connection. However the server does not know if the computer received the response and thus has to wait for the 
-						computer to send an ACK packet before connecting with it. This is to ensure that the computer is ready to connect as if the SYN/ACK packet was not delivered to the computer then the server 
+						computer to send an ACK packet before connecting with it. This is to ensure that the computer is ready to connect.  If the SYN/ACK packet was not delivered to the computer, then the server 
 						would just be waiting with an open connection for the computer to connect.</p>
 					</div>
 				</div>
@@ -97,10 +99,8 @@
 				<span class="helper">https://www.youtube.com/watch?v=AYdF7b3nMto</span>
 				<h3>Jargon Buster</h3>
 				<ul class="boxed-list">
-					<li><strong>Arrival Rate:</strong> The number of arrivals occuring per unit time.</li>
-					<li><strong>Server Capacity:</strong> Number of packets the server can serve per unit time.</li>
-					<li><strong>Occupancy:</strong> Number of packets in the queueing system (averaged over a long time).</li>
-					<li><strong>Delay:</strong> Time between packet entry and exit (average of many packets).</li>
+					<li><strong>Domain Name Server:</strong> A server that is able to convert a domain name (www.example.com) into an IP address (xxx.xxx.xx.xx) so that computers on the network can identify each other.</li>
+					<li><strong>Autonomous System:</strong> A collection of computers under the authority of a particular network administrator, such as your ISP.</li>
 				</ul>
 				<h3>Reference Links</h3>
 				<ol>

@@ -247,8 +247,6 @@ body {
 
 .menu {
 	z-index: 400;
-	position: absolute;
-	top: 50px;
 	background: #fff;
 	width: 100%;
 	padding: 10px;
