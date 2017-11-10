@@ -43,19 +43,24 @@
 					<div class="expanse">
 						<p>Recently there has been an uproar in the networking community because of an encryption protocol called <i class="jargon">WPA2</i>, which is the most secure form of wifi-encryption currently available, being broken. 
 						This was due to the publication of the "Krack Article" which was released detailing certain aspects of the attack but stopping short of explaining it in full. This was to give companies time to 
-						patch the vulnerabilities before it affected their users. To understand the full effects of this research paper on the networking world, we need to first step back into history and talk about one 
-						of the first widely used encryption protocols, <i class="jargon">WEP</i>.</p>
+						patch the vulnerabilities before it affected their users.</p>
 					</div>
 				</div>
 				<div id="key-people" class="drop-info">
 					<h2>Key People</h2>
 					<div class="expanse">
-						<div class="profile">
-							<h3>Mathy Vanhoef</h3>
-							<p>Mathy is a post-doctoral researcher at KU Leuven, where he looks at how vulnerabilities in network protocols can be automatically detected.</p>
-							<h3>Frank Piessens</h3>
-							<p>Frank is a professor at KU Leuven.  His research interests include software security.</p>
-						</div>
+						<h3>Krack Article</h3>
+						<h4>Mathy Vanhoef</h4>
+						<p>Mathy is a post-doctoral researcher at KU Leuven, where he looks at how vulnerabilities in network protocols can be automatically detected.</p>
+						<h4>Frank Piessens</h4>
+						<p>Frank is a professor at KU Leuven.  His research interests include software security.</p>
+						<h3>WEP Insecurities</h3>
+						<h4>Nikita Borisov</h4>
+						<p>Nikita is a research professor at the University of Illinois. His research interests are network security and online privacy.</p>
+						<h4>Ian Goldberg</h4>
+						<p>Ian is currently a professor at the University of Waterloo. He is also known for breaking the Netspace implementation of SSL.</p>
+						<h4>David Wagner</h4>
+						<p>David is currently a professor at the University of California. His research interests include cryptography.</p>
 					</div>
 				</div>
 				<div id="history" class="drop-info">
@@ -92,7 +97,8 @@
 						<p>In asymmetric encryption, you have two keys. One is the public key, which is publicly available, and the other is the private key which is never given out. The public key encrypts messages 
 						that only the private key can decrypt and vice versa. The public key and private key together are known as a key pair. Asymmetric encryption allows you to send information across the network that 
 						is encrypted, but only people with the private key will be able to decode your information. In this way, you do not have to agree on a predetermined key in order to communicate securely with somebody. 
-						This means that we would simply encrypt our password with the public key and send it to the website and only they would be able to decrypt it as they have the private key. Moreover, asymmetric 
+						This means that we would simply encrypt our password with the public key and send it to the website and only they would be able to decrypt it as they have the private key.</p>
+						<p>Moreover, asymmetric 
 						encryption can be used as a verification tool in the form of a technique called PGP (Pretty Good Privacy) . In our networking example let us have two key pairs called KeyA and KeyAA and KeyB and 
 						KeyBB, where Key Pair A belongs to the client and Key Pair B belongs to the server. Also Key A and Key B are the public keys and are available to everyone while Key AA and Key BB are private keys. 
 						If the client uses his private key (Key AA) to encrypt data, we know that the data is from the client. If he then encrypts it again with the server’s public key (Key B) and sends it the server, 
@@ -130,7 +136,7 @@
 			<script src="js/dropinfo.js"></script>
 			<div id="sidebar" class="f-40">
 				<video style="width:100%;" controls>
-					<source src="vid/security.mp4" type="video/mp4">
+					<source src="vid/krack.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
 				<h3>Jargon Buster</h3>
