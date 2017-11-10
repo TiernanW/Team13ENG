@@ -74,9 +74,34 @@
 						packet sent across a network, preventing key attack as the packet keys depend on another randomized key made of the session key and initialization vector.</p>
 					</div>
 				</div>
-				<div id="handshake" class="drop-info">
-					<h2>4-Way Handshake</h2>
+				<div id="encrypt" class="drop-info">
+					<h2>What is Encryption?</h2>
 					<div class="expanse">
+						<p>To understand how Krack works, we need to understand a few networking concepts. One of these concepts is encryption. Encryption is a method of securing information when sending data across 
+						the internet so that your data is not stolen. An example of this would be sending your password over a network when attempting to login to a website. While you need to send the password, you don’t 
+						want malicious users to know what your password. By using your encryption, when your password was sent across the network it would become a garbled mess of text and thus if it was stolen, your 
+						information would not be lost. Also when it reaches the website, the website could transform the garbled data into your password and let you enter the site. There are only two main ways of encrypting 
+						data, either using symmetric encryption (secret key encryption) or asymmetric encryption (public key encryption).</p>
+						<h3>Symmetric Encryption</h3>
+						<p>If we used symmetric encryption in our networking example, the client would first encrypt the data using a key and then send it to a server which would be able to decrypt it by using the same 
+						key the client used. This method of encryption is the simplest as it only involves one key but relies on both parties already knowing the key. This is fine if you can safely transfer the key to the 
+						other party, however if you are unable to transfer the key safely, you can use asymmetric encryption.</p>
+						<h3>Asymmetric Encryption</h3>
+						<p>In asymmetric encryption, you have two keys. One is the public key, which is publically available, and the other is the private key which you never give out. The public key encrypts messages 
+						that only the private key can decrypt and vice versa. The public key and private key together are known as a key pair. Asymmetric encryption allows you to send information across the network that 
+						is encrypted, but only people with the private key will be able to decode your information. In this way, you do not have to agree on a predetermined key in order to communicate securely with somebody. 
+						This means that we would simply encrypt our password with the public key and send it to the website and only they would be able to decrypt it as they have the private key. Moreover, asymmetric 
+						encryption can be used as a verification tool in the form of a technique called PGP (Pretty Good Privacy) . In our networking example let us have two key pairs called KeyA and KeyAA and KeyB and 
+						KeyBB, where Key Pair A belongs to the client and Key Pair B belongs to the server. Also Key A and Key B are the public keys and are available to everyone while Key AA and Key BB are private keys. 
+						If the client uses his private key (Key AA) to encrypt data, we know that that data is from the client. If he then encrypts it again with the server’s public key (Key B) and sends it the server, 
+						the server is able to decrypt the data and know that it is truly the client who sent him this data. This is a major advantage for public-key encryption as it can act as a verification tool as well 
+						as ensuring that data sent is securely transmitted.</p>
+					</div>
+				</div>
+				<div id="issues" class="drop-info">
+					<h2>Krack</h2>
+					<div class="expanse">
+						<h3>4-Way Handshake</h3>
 						<p>A concept that needs to be understood before delving into Krack is the 4-way handshake. The 4-way handshake plays a crucial part in networking authentication as it allows a wifi 
 						access point and a computer to authenticate each other by proving they both know the <i class="jargon">Pairwise Master Key (PMK)</i>. They do this by encrypting their messages so that they can only be decrypted by 
 						a computer or access point that knows the PMK.  However, as the PMK needs to be shared during the entire time the computer and access point communicate with each other, another key is needed to 
@@ -84,11 +109,7 @@
 						access point as well as some random numbers (anonce and snonce) to generate a number. This number is then put through a pseudo random algorithm to come up with the PTK. In order for the access point 
 						and computer to encrypt their traffic in the same manner, the 4-way handshake shares these parts of the PTK with each other in order to construct the PTK individually and be able to communicate 
 						securely.</p>
-					</div>
-				</div>
-				<div id="issues" class="drop-info">
-					<h2>Krack</h2>
-					<div class="expanse">
+						<h3>The Issue</h3>
 						<p>As you can see, wifi protocols have been broken before and recently <i class="jargon">WPA2</i> was broken by a key reinstallation attack, or krack for short. In a paper discovered by Mathy Vanhoef and 
 						Frank Piessens of imec-DistriNet, KU Leuven, the introduce this new concept. It states that:</p>
 						<blockquote>"All protected Wi-Fi networks use the 4-way handshake to generate a fresh session key. So far, this 14-year-old handshake has remained free from attacks, and is even 
@@ -96,18 +117,11 @@
 						This is achieved by manipulating and replaying handshake messages. When reinstalling the key, associated parameters such as the incremental transmit packet number (nonce) and receive 
 						packet number (replay counter) are reset to their initial value." (2)</blockquote> 
 						<blockquote>"The impact depends on the handshake being attacked, and the data-confidentiality protocol in use." (2)</blockquote>
-						<blockquote>"Simplified, against AES-CCMP an adversary can replay and decrypt (but not forge) packets. This makes it possible to hijack TCP streams and inject malicious data into them. Against 
-						WPATKIP and GCMP the impact is catastrophic: packets can be replayed, decrypted, and forged. Because GCMP uses the same authentication key in both communication directions, it is 
-						especially affected. Finally, we confirmed our findings in practice, and found that every Wi-Fi device is vulnerable to some variant of our attacks. Notably, our attack is 
-						exceptionally devastating against Android 6.0: it forces the client into using a predictable all-zero encryption key" (2)</blockquote>
-						<p>Essentially what is happening is that a 4-way handshake is used in order to generate session keys. However, by throwing errors and say that you missed certain handshakes, you can 
-						reset certain values to predictable numbers and use these numbers to mess with the encryption process in ways that were not intended. By manipulating these handshakes, depending on what 
+						<p>Essentially what the paper is stating is that the 4-way handshake  used in order to generate session keys is vulnerable. By throwing errors and saying that you missed certain handshakes, 
+						you can reset certain values to predictable numbers and use these numbers to mess with the encryption process in ways that were not intended. By manipulating these handshakes, depending on what 
 						handshake is used, we can get different parts of each encryption method and use them in different ways. This is because there is no standard for how networks deal with re-transmitting passwords. 
-						This causes certain operating systems such as Windows and Mac OS to not accept retransmitted handshake messages and others to accept them such as Android 6.0. However, if you are worried about 
-						your data being stolen, don’t be alarmed yet. This was just a proof of concept research paper and the exact method of doing this has not been revealed yet. Essentially this paper was given to 
-						developers of networks long before release allowing them to provide patches for the general public. However, others might have known about this attack long before the researchers discovered it 
-						and might have been using it for quite some time. If you are truly concerned then I would suggest changing your passwords otherwise you can continue using the internet as normal, but now with a 
-						greater appreciation for encryption.</p>
+						This causes certain operating systems such as Windows and Mac OS to not accept retransmitted handshake messages and others to accept them such as Android 6.0. However, if you are worried about your 
+						data being stolen, don’t be alarmed yet.</p>
 					</div>
 				</div>
 			</div>

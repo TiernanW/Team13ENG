@@ -59,6 +59,21 @@
 						Queues provide buffers to store requests from devices temporarily so that the network can serve them later.</p>
 					</div>
 				</div>
+				<div id="focus" class="drop-info">
+					<h2>Queueing Mechanisms</h2>
+					<div class="expanse">
+						<p>There is no one queueing mechanism that works best on all situations. It is the scientists’ job to invent different mechanics for different needs. Below are some commonly seen mechanisms:</p>
+						<ul>
+							<li>First in first out (FIFO): the packet arrived earlier will be served before others. (1)</li>
+							<li>By priority: the packet with the highest priority will be served next. (1)</li>
+							<li>Weighted fair queueing: packets will be given different weights (or priorities), such that more packets with higher weight are served than others. 
+							A shorter packet will often have higher priority. (3)</li>
+							<li>A mixture of the above</li>
+						</ul>
+						<img src="img/wfq.gif" alt="weighted fair queue">
+						<p class="helper">Image showing how weighted fair queueing works.  From https://www.cse.iitk.ac.in/users/braman/courses/cs625-fall2003/lec-notes/lec-notes07-2.html</p>
+					</div>
+				</div>
 				<div id="history" class="drop-info">
 					<h2>Stability of Queueing System</h2>
 					<div class="expanse">
@@ -76,19 +91,6 @@
 						<p>MIT and UCL had collaborated to study different queueing algorithms for switched networks. Depending on whether the network is lightly-loaded, critically-loaded or overloaded, 
 						its performance and behavior changed accordingly. The result of the research enabled scientists to develop scheduling algorithms which work near-optimally under all three situations. 
 						These algorithms can be widely applied, including wifi networks, network congestion control, and even real-world road roundabouts.</p>
-					</div>
-				</div>
-				<div id="focus" class="drop-info">
-					<h2>Queueing Mechanisms</h2>
-					<div class="expanse">
-						<p>There is no one queueing mechanism that works best on all situations. It is the scientists’ job to invent different mechanics for different needs. Below are some commonly seen mechanisms:</p>
-						<ul>
-							<li>First in first out (FIFO): the packet arrived earlier will be served before others. (1)</li>
-							<li>By priority: the packet with the highest priority will be served next. (1)</li>
-							<li>Weighted fair queueing: packets will be given different weights (or priorities), such that more packets with higher weight are served than others. 
-							A shorter packet will often have higher priority. (3)</li>
-							<li>A mixture of the above</li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -110,7 +112,7 @@
 				<ol>
 					<li><a href="http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt">http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt</a></li>
 					<li><a href="http://web.mit.edu/~devavrat/www/shahwischik.pdf">http://web.mit.edu/~devavrat/www/shahwischik.pdf</a></li>
-					<li><a href="http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt">http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt</a></li>
+					<li><a href="https://www.cse.iitk.ac.in/users/braman/courses/cs625-fall2003/lec-notes/lec-notes07-2.html">https://www.cse.iitk.ac.in/users/braman/courses/cs625-fall2003/lec-notes/lec-notes07-2.html</a></li>
 				</ol>
 			</div>
 		</div>

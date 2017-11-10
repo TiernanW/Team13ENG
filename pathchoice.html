@@ -77,10 +77,10 @@
 							<li><strong>Scalability:</strong> The global <i class="jargon">Border Gateway Protocol (BGP)</i> is not in an optimal state.  This table is filled with IP
 							address prefixes, and some of them are more specific than others.  For example, 125.68.45 is more specific than 
 							125.68.  Around half the entries in the BGP table are these more specific prefixes.  In a sense, this data could be 
-							considered redundant because the less specific prefix should suffice for routing. ISPs are concerned about the rate at which the BGP is growing.</li>
+							considered redundant because the less specific prefix should suffice for routing. ISPs are concerned about the rate at which the BGP is growing. (1)</li>
 							<li><strong>Slow failure recovery:</strong> The BGP does not update immediately whenever there are network failures. 
 							This means that packets may be routed along the broken path for a small time frame when the network first initially 
-							goes down.  This can disrupt the user experience.</li>
+							goes down.  This can disrupt the user experience. (1)</li>
 						</ul>
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 						<p>UCL have proposed using a multipath-capable <i class="jargon">Transmission Control Protocol (TCP)</i>.  This would work by having the sender and receiver of data packets both multihomed.  This means that they would have multiple 
 						IP addresses. When they first interact, these IP addresses could all be exchanged, allowing multiple paths to be set up.  One advantage of this is that if a packet is dropped, 
 						the system can respond more quickly and resend the packet on another path.</p>
-						<p>UCL have also suggested that congestion should be controlled by <i>Explicit Congestion Notifications (ECN)</i> markers.  This would allow the transmission rate to incrementally steadily, 
+						<p>UCL researchers have also suggested that congestion should be controlled by <i>Explicit Congestion Notification (ECN)</i> markers.  This would allow the transmission rate to incrementally steadily, 
 						and once a ECN is sent, or packet loss is detected, the transmission rate could be cut.</p>
 					</div>
 				</div>
