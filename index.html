@@ -15,19 +15,26 @@
 		<nav id="nav" class="topNav">
 			<a href="index.html">Home</a>
 			<a href="history.html">History</a>
-			<a href="research.html">Research</a>
-			<a href="people.html">People</a>
-			<a href="index.html#team">About Us</a>
+			<a onClick="displayDrop()">Research</a>
+			<a href="projects.html">Projects</a>
+			<a href="basicconcepts.html">Basic Concepts</a>
 			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
 			<script src="js/respnav.js"></script>
 		</nav>
+		<div id="re-drop" class="menu" style="display: none">
+			<a href="pathchoice.html">Path Choice</a>
+			<a href="security.html">Web Security</a>
+			<a href="teleology.html">Queueing Theory</a>
+			<a href="architecture.html">Web Architecture</a>
+		</div>
+		<script src="js/dropmenu.js"></script>
 	</header>
 	<section id="intro">
 		<h1 id="logo" style="z-index:60">
 			Systems & Networks
 		</h1>
 		<div id="downAr" style="left: 49%;bottom: 8%;position:absolute">
-			<img src="img/down-arrow-w.png" alt="parallax">
+			<a href="#content"><img src="img/down-arrow-w.png" alt="parallax"></a>
 		</div>
 		<span class="helper">IMG Source: https://wallpapertag.com/img/305577</span>
 	</section>
@@ -76,17 +83,22 @@
 						</div>
 						<div class="f-25" style="background-image:url('img/news/pathchoice.jpg')">
 							<div class="news-d">
-								<span class="helper">Web Architecture</span>
+								<span class="helper">Path Choice</span>
 								<h3><a href="pathchoice.html">Tackling Issues with Congestion and Scalability</a></h3>
 							</div>
 						</div>
 						<div class="f-25" style="background-image:url('img/news/queue.jpg')">
 							<div class="news-d">
 								<span class="helper">Web Architecture</span>
-								<h3><a href="#">Queueing Theory and Modeling Behaviour</a></h3>
+								<h3><a href="teleology.html">Queueing Theory and Modeling Behaviour</a></h3>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="f-100" style="text-align:center">
+					View our research menu for more.
 				</div>
 			</div>
 		</div>
@@ -102,7 +114,7 @@
 						<img src="img/duncan.jpg" alt="face" class="profile-img">
 						<div class="profile-desc">
 							<h3>Duncan Rowe</h3>
-							<p>This is a paragraph about Duncan and his role(s). Going onto multiple lines here to check padding.</p>
+							<p>Duncan has an interest in the world of web security and encryption. Naturally, he researched web security.</p>
 						</div>
 						<div style="clear:both"></div>
 					</div>
@@ -117,21 +129,21 @@
 						<img src="img/elena.jpg" alt="face" class="profile-img">
 						<div class="profile-desc">
 							<h3>Elena Aleksiva</h3>
-							<p>Elena is part of the research group, focusing on the subject's history and future prospects. Skills for effective processing of information were acquired during the process.</p>
+							<p>Elena is part of the research group, focusing on the subject's history and future prospects. Skills for the effective processing of information were acquired during the process.</p>
 						</div>
 					</div>
 					<div class="f-50 profile">
 						<img src="img/yin.jpg" alt="face" class="profile-img">
 						<div class="profile-desc">
 							<h3>Yin Long Ho</h3>
-							<p>This is a paragraph about Duncan and his role(s).</p>
+							<p>Yin researched the area of queueing theory for this project.</p>
 						</div>
 					</div>
 					<div class="f-50 profile">
 						<img src="img/liu.jpg" alt="face" class="profile-img">
 						<div class="profile-desc">
 							<h3>Frank Liu</h3>
-							<p>This is a paragraph about Duncan and his role(s).</p>
+							<p>Frank researched the area of network structure for this project.</p>
 						</div>
 					</div>
 					<div class="f-50 profile">

@@ -6,7 +6,7 @@ var topB = document.getElementById("top");
 
 function colorNav() {
 	var offset = window.pageYOffset;
-	if(offset > 80) {
+	if(offset > 80 || window.innerWidth < 600) {
 		topB.style.backgroundColor = "#fff";
 		for(i = 0; i < arefs.length; i++) {
 			arefs[i].style.color = "#222";

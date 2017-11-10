@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/resp.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -15,18 +15,25 @@
 		<nav id="nav" class="topNav">
 			<a href="index.html">Home</a>
 			<a href="history.html">History</a>
-			<a href="research.html">Research</a>
-			<a href="people.html">People</a>
-			<a href="index.html#team">About Us</a>
+			<a onClick="displayDrop()">Research</a>
+			<a href="projects.html">Projects</a>
+			<a href="basicconcepts.html">Basic Concepts</a>
 			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
 			<script src="js/respnav.js"></script>
 		</nav>
+		<div id="re-drop" class="menu" style="display: none">
+			<a href="pathchoice.html">Path Choice</a>
+			<a href="security.html">Web Security</a>
+			<a href="teleology.html">Queueing Theory</a>
+			<a href="architecture.html">Web Architecture</a>
+		</div>
+		<script src="js/dropmenu.js"></script>
 	</header>
-	<section id="pageIntro" style="background:url('img/historybg.jpg') bottom fixed">
+	<section id="pageIntro" style="background:url('img/covers/history.jpg') top center fixed;">
 		<h1 style="z-index:60">
 			History of Systems and Networks
 		</h1>
-		<span class="helper">Image: http://www.industrypdx.com/inspire/human-interaction/</span>
+		<span class="helper">Image: http://www.azwallpapers.net</span>
 	</section>
 	<section id="content">
 		<div class="row">

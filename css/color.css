@@ -1,7 +1,5 @@
 /* Colors CSS file */
 
-
-
 h1 {
 
 	color: #fff;
@@ -38,6 +36,11 @@ body {
 #nav ul li:hover {
 	border-right: 1px solid #d1d1d1;
 	transition: 0.2s;
+}
+
+.menu a {
+	margin: 0;
+	padding: 0 20px;
 }
 
 #logo {
@@ -96,5 +99,4 @@ body {
 .wrapped {
 	border-top: 1px solid #d1d1d1;
 	border-bottom: 1px solid #d1d1d1;
-	color: #fff;
 }

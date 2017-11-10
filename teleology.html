@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/resp.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -15,18 +15,25 @@
 		<nav id="nav" class="topNav">
 			<a href="index.html">Home</a>
 			<a href="history.html">History</a>
-			<a href="research.html">Research</a>
-			<a href="people.html">People</a>
-			<a href="index.html#team">About Us</a>
+			<a onClick="displayDrop()">Research</a>
+			<a href="projects.html">Projects</a>
+			<a href="basicconcepts.html">Basic Concepts</a>
 			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
 			<script src="js/respnav.js"></script>
 		</nav>
+		<div id="re-drop" class="menu" style="display: none">
+			<a href="pathchoice.html">Path Choice</a>
+			<a href="security.html">Web Security</a>
+			<a href="teleology.html">Queueing Theory</a>
+			<a href="architecture.html">Web Architecture</a>
+		</div>
+		<script src="js/dropmenu.js"></script>
 	</header>
-	<section id="pageIntro" style="background:url('img/historybg.jpg') bottom fixed">
+	<section id="pageIntro" style="background:url('img/covers/tel.jpg') top center fixed">
 		<h1 style="z-index:60">
-			Teleology of Scheduling Algorithms
+			Queueing Theory and Scheduling
 		</h1>
-		<span class="helper">Image: http://www.industrypdx.com/inspire/human-interaction/</span>
+		<span class="helper">Image: https://www.tcprn.com</span>
 	</section>
 	<section id="content">
 		<div class="row">
@@ -48,6 +55,8 @@
 						<p>Studying queueing system is important as it can greatly affect the time for a network to serve 
 						devices. A badly designed system would lead to a long queue with tons of users waiting to be 
 						served.</p>
+						<p>Why do we use queueing systems? With hundreds of millions of devices accessing the Internet, the network does not have enough resources to serve all of them at once. 
+						Queues provide buffers to store requests from devices temporarily so that the network can serve them later.</p>
 					</div>
 				</div>
 				<div id="history" class="drop-info">
@@ -62,27 +71,24 @@
 					</div>
 				</div>
 				<div id="issues" class="drop-info">
-					<h2>Current Issues</h2>
+					<h2>Recent Research</h2>
 					<div class="expanse">
-						<ul>
-							<li><strong>Scalability:</strong> The global <i class="jargon">Border Gateway Protocol (BGP)</i> is not in an optimal state.  This table is filled with IP
-							address prefixes, and some of them are more specific than others.  For example, 125.68.45 is more specific than 
-							125.68.  Around half the entries in the BGP table are these more specific prefixes.  In a sense, this data could be 
-							considered redundant because the less specific prefix should suffice for routing. ISPs are concerned about the rate at which the BGP is growing.</li>
-							<li><strong>Slow failure recovery:</strong> The BGP does not update immediately whenever there are network failures. 
-							This means that packets may be routed along the broken path for a small time frame when the network first initially 
-							goes down.  This can disrupt the user experience.</li>
-						</ul>
+						<p>MIT and UCL had collaborated to study different queueing algorithms for switched networks. Depending on whether the network is lightly-loaded, critically-loaded or overloaded, 
+						its performance and behavior changed accordingly. The result of the research enabled scientists to develop scheduling algorithms which work near-optimally under all three situations. 
+						These algorithms can be widely applied, including wifi networks, network congestion control, and even real-world road roundabouts.</p>
 					</div>
 				</div>
 				<div id="focus" class="drop-info">
-					<h2>Goals and Focus</h2>
+					<h2>Queueing Mechanisms</h2>
 					<div class="expanse">
-						<p>UCL have proposed using a multipath-capable <i class="jargon">Transmission Control Protocol (TCP)</i>.  This would work by having the sender and receiver of data packets both multihomed.  This means that they would have multiple 
-						IP addresses. When they first interact, these IP addresses could all be exchanged, allowing multiple paths to be set up.  One advantage of this is that if a packet is dropped, 
-						the system can respond more quickly and resend the packet on another path.</p>
-						<p>UCL have also suggested that congestion should be controlled by <i>Explicit Congestion Notifications (ECN)</i> markers.  This would allow the transmission rate to incrementally steadily, 
-						and once a ECN is sent, or packet loss is detected, the transmission rate could be cut.</p>
+						<p>There is no one queueing mechanism that works best on all situations. It is the scientists’ job to invent different mechanics for different needs. Below are some commonly seen mechanisms:</p>
+						<ul>
+							<li>First in first out (FIFO): the packet arrived earlier will be served before others. (1)</li>
+							<li>By priority: the packet with the highest priority will be served next. (1)</li>
+							<li>Weighted fair queueing: packets will be given different weights (or priorities), such that more packets with higher weight are served than others. 
+							A shorter packet will often have higher priority. (3)</li>
+							<li>A mixture of the above</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -102,7 +108,9 @@
 				</ul>
 				<h3>Reference Links</h3>
 				<ol>
+					<li><a href="http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt">http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt</a></li>
 					<li><a href="http://web.mit.edu/~devavrat/www/shahwischik.pdf">http://web.mit.edu/~devavrat/www/shahwischik.pdf</a></li>
+					<li><a href="http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt">http://web.mit.edu/dimitrib/www/OPNET_Full_Presentation.ppt</a></li>
 				</ol>
 			</div>
 		</div>

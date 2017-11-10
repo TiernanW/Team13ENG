@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/resp.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
 </head>
 
 <body>
@@ -15,18 +16,25 @@
 		<nav id="nav" class="topNav">
 			<a href="index.html">Home</a>
 			<a href="history.html">History</a>
-			<a href="research.html">Research</a>
-			<a href="people.html">People</a>
-			<a href="index.html#team">About Us</a>
+			<a onClick="displayDrop()">Research</a>
+			<a href="projects.html">Projects</a>
+			<a href="basicconcepts.html">Basic Concepts</a>
 			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
 			<script src="js/respnav.js"></script>
 		</nav>
+		<div id="re-drop" class="menu" style="display: none">
+			<a href="pathchoice.html">Path Choice</a>
+			<a href="security.html">Web Security</a>
+			<a href="teleology.html">Queueing Theory</a>
+			<a href="architecture.html">Web Architecture</a>
+		</div>
+		<script src="js/dropmenu.js"></script>
 	</header>
-	<section id="pageIntro" style="background:url('img/historybg.jpg') bottom fixed">
+	<section id="pageIntro" style="background:url('img/covers/concepts.jpg') top center fixed">
 		<h1 style="z-index:60">
-			Teleology of Scheduling Algorithms
+			Internet Concepts
 		</h1>
-		<span class="helper">Image: http://www.industrypdx.com/inspire/human-interaction/</span>
+		<span class="helper">Image: https://blog.nxp.com</span>
 	</section>
 	<section id="content">
 		<div class="row">
@@ -38,6 +46,15 @@
 						would go to your router which would point it to your Internet Service Provider or ISP. From there your website request would be looked up at a Domain Name Server (DNS) which simply connects 
 						the name of the webpage with an internet address. Your request would then go to this internet address, possibly traversing thousands of miles of land or sea before the web page receives your 
 						request. It would then send a response which your computer would get and combine to show the webpage that you requested.</p>
+					</div>
+				</div>
+				<div id="struct" class="drop-info">
+					<h2>Routing</h2>
+					<div class="expanse">
+						<p>Different network structures have different ways to transmit information from one node to other nodes. Routing is the process to select the best way for delivering data and information. 
+						Routing directs information from their source to ultimate destination via intermediate nodes. Usually, intermediate nodes are hardware device like routers, bridges and gateways. Also, 
+						intermediate nodes can store different routes in memory. Each single element can choose the best way to be transferred. For example, we have to transfer information from node 1 to node 6. 
+						There are lots of different ways to deliver the information. The best way is 1-8-7-6. Process of selecting this path is called routing.</p>
 					</div>
 				</div>
 				<div id="introduction" class="drop-info">
@@ -60,6 +77,16 @@
 						for streaming services like twitch where it doesn’t really matter if you miss a couple frames. </p>
 					</div>
 				</div>
+				<div id="handshake" class="drop-info">
+					<h2>3-Way Handshake</h2>
+					<div class="expanse">
+						<p>Creating a connection between a computer and server is difficult. In order to combat this, a 3 way handshake was developed and is used today. First your computer sends to the server a SYN 
+						packet to the server, asking it to develop a connection. However after sending the packet, the computer has no idea if the server received the data. Therefore the server sends back a SYN/ACK 
+						packet which says that it did receive your request and that you can create a connection. However the server does not know if the computer received the response and thus has to wait for the 
+						computer to send an ACK packet before connecting with it. This is to ensure that the computer is ready to connect as if the SYN/ACK packet was not delivered to the computer then the server 
+						would just be waiting with an open connection for the computer to connect.</p>
+					</div>
+				</div>
 			</div>
 			<script src="js/dropinfo.js"></script>
 			<div id="sidebar" class="f-40">
@@ -77,7 +104,8 @@
 				</ul>
 				<h3>Reference Links</h3>
 				<ol>
-					<li><a href="http://web.mit.edu/~devavrat/www/shahwischik.pdf">http://web.mit.edu/~devavrat/www/shahwischik.pdf</a></li>
+					<li><a href="web.cs.wpi.edu/~jb/CS502/lectures/Section16-Dist_System_Structures.ppt">web.cs.wpi.edu/~jb/CS502/lectures/Section16-Dist_System_Structures.ppt</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Computer_network">https://en.wikipedia.org/wiki/Computer_network</a></li>
 				</ol>
 			</div>
 		</div>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Systems and Networks</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/resp.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+	<header id="top">
+		<nav id="nav" class="topNav">
+			<a href="index.html">Home</a>
+			<a href="history.html">History</a>
+			<a onClick="displayDrop()">Research</a>
+			<a href="projects.html">Projects</a>
+			<a href="basicconcepts.html">Basic Concepts</a>
+			<div id="menuButton" style="position:absolute;top:5px;right:10px;"><img src="img/mobilemenu.png" alt="menu expander"></div>
+			<script src="js/respnav.js"></script>
+		</nav>
+		<div id="re-drop" class="menu" style="display: none">
+			<a href="pathchoice.html">Path Choice</a>
+			<a href="security.html">Web Security</a>
+			<a href="teleology.html">Queueing Theory</a>
+			<a href="architecture.html">Web Architecture</a>
+		</div>
+		<script src="js/dropmenu.js"></script>
+	</header>
+	<section id="pageIntro" style="background:url('img/covers/path.jpg') top center fixed">
+		<h1 style="z-index:60">
+			Path Choice and Internet Architecture
+		</h1>
+		<span class="helper">Image: http://www.7sixty.com/</span>
+	</section>
+	<section id="content">
+		<div class="row">
+			<div class="f-60">
+				<div id="introduction" class="drop-info">
+					<h2>Introduction</h2>
+					<div class="expanse">
+						<p>This area of research focuses on how networks are structured.  How a network is 
+						structured ultimately will affect how it performs, and decides its strengths and 
+						weaknesses. It is important to note that this does not just apply to the "internet". 
+						All networks must follow a structure such as those investigated below.</p>
+					</div>
+				</div>
+				<div id="struct" class="drop-info">
+					<h2>Network Structures</h2>
+					<div class="expanse">
+						<img src="img/shapes.jpg" alt="network layouts">
+						<p>The structure and design of a network will directly affect its properties.  Here are some of the network layouts: </p>
+						<ul>
+							<li>Star shape: There is a central node in star shape. It’s the only relay for 
+							other nodes. Star shape is easily to built up and managed. However, it is expensive 
+							and unreliable, as the loss of the central node brings the whole network down.</li>
+							<li>Ring shape: All nodes in the network are connected one by one to form a 
+							ring shape. Data and information are transferred clockwise or anti-clockwise.</li>
+							<li>Tree shape: This structure is a bit complicated. It has several levels. 
+							The higher level, the more reliable the node has to be. This kind of 
+							structure has low cost and can be easily expanded.</li>
+							<li>Mesh shape: This is how the internet is connected, and is therefore the 
+							most common.  Each node is connected randomly.  This structure means that the internet is more reliable and will not go down because of one node.</li>
+						</ul>
+						Reference (1)
+					</div>
+				</div>
+				<div id="history" class="drop-info">
+					<h2>History</h2>
+					<div class="expanse">
+						<p>The word, network first appeared in 1950s. Early computer network was used for military 
+						like U.S military communication network. It has to be simple and secure so that information 
+						can still be transferred when  enemy attack the network. Computer networks started to be 
+						used commercially from 1960. The first widely used telecommunication network was introduced 
+						by Western Electric company. Until 1973, the French CYCLADES network created reliable hosts 
+						which can be used to deliver information. At that time, the network transmission speed was 
+						only 50 kbit/s. The speed then increased  100 Mbit/s in 1995. By the end of 20th century, 
+						the transmission speed increased to Gigabit level.</p>
+					</div>
+				</div>
+			</div>
+			<script src="js/dropinfo.js"></script>
+			<div id="sidebar" class="f-40">
+				<video style="width:100%;" controls>
+					<source src="vid/tcp.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<h3>Jargon Buster</h3>
+				<ul class="boxed-list">
+					<li><strong>TCP:</strong> Transmission Control Protocol.  A set of rules that control how information is set over the internet.</li>
+					<li><strong>BGP:</strong> Border Gateway Protocol. This is the internet's way of routing traffic through the internet by 
+					connecting <i>autonomous systems</i>.  The idea is pick the shortest path.</li>
+					<li><strong>Autonomous System:</strong> This is a network of computers that make up the network of the internet.  This is 
+					why we refered to the internet as a "network of networks."  These sub-networks could be part of your ISP for example.</li>
+					<li><strong>ECN:</strong> Explicit Congestion Notifications.  These are markers in a packet that simply indicate congestion on the path.</li>
+				</ul>
+				<h3>Reference Links</h3>
+				<ol>
+					<li><a href="http://haig.cs.ucl.ac.uk/staff/M.Handley/papers/respool-ccr.pdf">http://haig.cs.ucl.ac.uk/staff/M.Handley/papers/respool-ccr.pdf</a></li>
+					<li><a href="http://history-computer.com/Internet/Maturing/TCPIP.html">http://history-computer.com/Internet/Maturing/TCPIP.html</a></li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<footer id="bottom" class="inner-container">
+		<div class="f-100">
+			&copy; Team 13. Designed for Engineering Challenge 1.
+		</div>
+	</footer>
+</body>
