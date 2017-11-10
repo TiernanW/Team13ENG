@@ -83,17 +83,19 @@
 						information would not be lost. Also when it reaches the website, the website could transform the garbled data into your password and let you enter the site. There are only two main ways of encrypting 
 						data, either using symmetric encryption (secret key encryption) or asymmetric encryption (public key encryption).</p>
 						<h3>Symmetric Encryption</h3>
+						<img src="img/sym.jpg" alt="symmetric encryption">
 						<p>If we used symmetric encryption in our networking example, the client would first encrypt the data using a key and then send it to a server which would be able to decrypt it by using the same 
 						key the client used. This method of encryption is the simplest as it only involves one key but relies on both parties already knowing the key. This is fine if you can safely transfer the key to the 
 						other party, however if you are unable to transfer the key safely, you can use asymmetric encryption.</p>
 						<h3>Asymmetric Encryption</h3>
-						<p>In asymmetric encryption, you have two keys. One is the public key, which is publically available, and the other is the private key which you never give out. The public key encrypts messages 
+						<img src="img/asym.jpg" alt="asymmetric encryption">
+						<p>In asymmetric encryption, you have two keys. One is the public key, which is publicly available, and the other is the private key which is never given out. The public key encrypts messages 
 						that only the private key can decrypt and vice versa. The public key and private key together are known as a key pair. Asymmetric encryption allows you to send information across the network that 
 						is encrypted, but only people with the private key will be able to decode your information. In this way, you do not have to agree on a predetermined key in order to communicate securely with somebody. 
 						This means that we would simply encrypt our password with the public key and send it to the website and only they would be able to decrypt it as they have the private key. Moreover, asymmetric 
 						encryption can be used as a verification tool in the form of a technique called PGP (Pretty Good Privacy) . In our networking example let us have two key pairs called KeyA and KeyAA and KeyB and 
 						KeyBB, where Key Pair A belongs to the client and Key Pair B belongs to the server. Also Key A and Key B are the public keys and are available to everyone while Key AA and Key BB are private keys. 
-						If the client uses his private key (Key AA) to encrypt data, we know that that data is from the client. If he then encrypts it again with the server’s public key (Key B) and sends it the server, 
+						If the client uses his private key (Key AA) to encrypt data, we know that the data is from the client. If he then encrypts it again with the server’s public key (Key B) and sends it the server, 
 						the server is able to decrypt the data and know that it is truly the client who sent him this data. This is a major advantage for public-key encryption as it can act as a verification tool as well 
 						as ensuring that data sent is securely transmitted.</p>
 					</div>

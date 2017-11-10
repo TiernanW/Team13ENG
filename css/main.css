@@ -339,3 +339,8 @@ blockquote {
 	color: #444;
 	padding: 0 10px;
 }
+
+.expanse img {
+	margin: 0 auto;
+	display: block;
+}
